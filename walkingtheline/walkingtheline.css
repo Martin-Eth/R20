@@ -1,0 +1,2229 @@
+.charsheet{
+	background-color:#1f1f1f;	
+	width:840px;
+}
+
+.charsheet button[type=action].optBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	font-size:24px;
+	border-style: solid;
+	background-color: #702C91 ;
+	border-color: #000;
+	width:10em;
+	height:75px;
+	margin-left:1em;
+	color:#fff;
+	font-family:Contrail One, Helvetica, sans-serif;
+}
+
+.charsheet button[type=action].optBtn:hover {
+	background-color:#8D56A7;
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+
+/* ####################################################### */
+/* ###################### NPC sheet ###################### */
+/* ##########################npc########################## */
+.ui-dialog .charsheet button[type=roll].sheet-npcChatBtn::before {
+    font-family: "pictos";
+    content: "w";
+}
+
+.sheet-npcData{
+	border-style:ridge;
+	background-color:#21152b;
+	padding:5px;
+	border-radius:5px;
+}
+
+.sheet-npcStat-Grid {
+	grid-area:Stats;
+	grid-template-columns: 9em 5em;
+	display: grid;
+	font-size: 11px;
+	padding: 5px;
+	color: #cccccc;
+	background-color: #2a1c01;
+	border-style:groove;
+	align-items:top;
+}
+
+.sheet-npc2Col {
+	display: grid;
+	grid-template-columns: 16em 47em;
+	grid-template-areas:
+		"Stats	Abilities";
+	grid-gap: 0px;
+	color:#cccccc;
+}
+
+
+.sheet-npcMove-container {
+	grid-area:Abilities;
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	color: #eeeeee;
+	background-color: #4e0000;
+	border-style:groove;
+	align-items:top;
+	padding: 5px;
+	padding-left:1.5em;
+	padding-right:1.6em;
+}
+.repcontainer[data-groupname="repeating_npcskills"] {
+	flex: 0 1 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.repcontainer[data-groupname="repeating_npcskills"] .repitem {
+	flex: 0 0 auto;
+	color: black;
+	width: 281px;
+	border: 0px solid;
+	border-radius: 2px;
+	margin-top: 0px;
+}
+
+.sheet_npcAbBtnTxt {
+	font-size: 16px;
+	/*font-weight: bold;*/
+	font-family: Contrail One;
+	color: #F30;
+}
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll3,
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll2,
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll {
+	height: 18px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #702C91;
+	width: 4em;
+	font-family: Contrail One;
+	margin: 0px;
+	color: #cccccc;
+	background-image: none;
+	text-shadow: none;
+}
+
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll3:hover,
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll2:hover,
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll:hover {
+	background-color: #8d56a7;
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll::before {
+    font-family: "pictos";
+    content: "g ";
+}
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll2::before {
+    font-family: "pictos";
+    content: "U ";
+}
+.ui-dialog .charsheet button[type=roll].sheet-npcAbRoll3::before {
+    font-family: "pictos";
+    content: "k ";
+}
+/* ####################################################### */
+/* ################### End NPC sheet ##################### */
+/* ##########################npc########################## */
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAbilityRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-npcAbilityRoll .inlinerollresult,
+.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-npcAbilityRoll .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:white;
+	background-color:#702C91;
+}
+.sheet-rolltemplate-npcAbilityRoll .sheet-container,
+.sheet-rolltemplate-npcAttRoll .sheet-container {
+	color:#cccccc;
+	border: 2px solid;
+
+	border-color: #1f1f1f;
+	width: 100%;
+	border-radius: .5em;
+	line-height:1.2em;
+}
+
+.sheet-rolltemplate-npcAttRoll .sheet-container {
+	background-color:#4E3366;
+}
+
+.sheet-rolltemplate-npcAbilityRoll .sheet-container {
+	background-color:#8d0303;
+}
+
+.sheet-rolltemplate-npcAbilityRoll .sheet-hdr,
+.sheet-rolltemplate-npcAttRoll .sheet-hdr {
+	font-size:14px;
+	font-weight:bold;
+	color:#cccccc;
+	padding:0.5em;
+}
+
+.sheet-rolltemplate-npcAttRoll .sheet-hdr {
+	background-color:#21152b; 
+}
+
+.sheet-rolltemplate-npcAbilityRoll .sheet-hdr {
+	background-color:#4e0000;
+}
+
+.sheet-rolltemplate-npcAbilityRoll .sheet-content,
+.sheet-rolltemplate-npcAttRoll .sheet-content {
+	padding:0.5em;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAttRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAttRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAttRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-npcAttRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-npcAttRoll .inlinerollresult,
+.sheet-rolltemplate-npcAttRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-npcAttRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-npcAttRoll .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:#cccccc;
+	background-color:#8d0303;
+}
+
+.sheet-rolltemplate-recovery .sheet-container {
+	width: 100%;
+	line-height:1.5em;
+	padding:0.5em;
+	background-color:#003300;
+	color:#cccccc;;
+	font-style:italic;
+	text-align:center;
+	border-radius: 50px;
+}
+.sheet-rolltemplate-recovery .sheet-hdr {
+	font-size:14px;
+	padding:0.5em;
+	color:#cccccc;
+	font-style:italic;
+	text-align:center;
+}
+.sheet-rolltemplate-reloadWeapon .sheet-container {
+	width: 100%;
+	line-height:1.5em;
+	padding:0.5em;
+	background-color:#0a2351;
+	color:#cccccc;;
+	font-style:italic;
+	text-align:center;
+	border-radius: 50px;
+}
+
+.sheet-rolltemplate-reloadWeapon .sheet-hdr {
+	font-size:14px;
+	padding:0.5em;
+	color:#cccccc;
+	font-style:italic;
+	text-align:center;
+}
+
+textarea.npcTA  {
+    height: 48px;
+	resize:vertical;
+	background-color:#8a0303;
+	color: #cccccc;
+	width:19em;
+	margin-bottom:-7px;
+	border:2px solid black;
+	font-size:11px;
+}
+.sheet-npcAbilityConfig {
+	padding:5px;
+}
+/* show/hide button in the repeating section */
+.sheet-npcAbility:checked ~ *.sheet-npcAbilityConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HidenpcAbility::after { 
+	content: "^";
+}
+
+.charsheet .sheet-npcAbility:checked + span.sheet-is-HidenpcAbility::after { 
+	content: "v";
+}
+
+.charsheet span.sheet-is-HidenpcAbility {
+    text-align: center;
+    display: inline-block;    
+    width: 5%;
+    height: 16px;
+    font-size: 9px;
+    background: #65763c; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -18px;;
+}
+
+.charsheet input.sheet-npcAbility {
+    width: 5%;
+    height: 16px;
+    cursor: pointer;	
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-npcAbility:checked + span.sheet-is-HidenpcAbility {
+    background: #65763c;
+    border-radius: 4px;
+	color: white;
+}
+/* modify the style of the repeating section buttons */
+
+/* this sets the formatting for all repcontrol buttons */
+.charsheet .repcontrol_add,
+.charsheet .repcontrol_edit,
+.charsheet .repcontrol_del {
+    display: block;
+    background: #702C91;
+    color: #cccccc;
+	text-shadow:none;
+    box-shadow:none;
+    font-size:0.7em;
+    height:2em;
+}
+
+.charsheet .repcontrol_add:hover,
+.charsheet .repcontrol_edit:hover,
+.charsheet .repcontrol_del:hover {
+    display: block;
+    background: #21152b;
+    color: #cccccc;
+	text-shadow:none;
+    box-shadow:none;
+    font-size:0.7em;
+    height:2em;
+}
+
+/* End show/hide button in the repeating section */
+
+/* ####################################################### */
+/* ##################### Gen  sheet ###################### */
+/* ####################################################### */
+.sheet-bio2 {
+	grid-template-columns: 24em auto;
+	display:grid;
+	background-color:#1d2e28;
+	margin-left:-5px;
+	width:842x;
+}
+
+.sheet-notes,
+.sheet-journal {
+	padding: 2px 10px;
+	border-color:#000;
+	border-style:solid;
+	border-radius:5px;
+	border-width:2px;
+}
+
+textarea.sheet-notes  {
+    height: 36px;
+	resize:vertical;
+	background-color:#FFFFFF;
+	width:90%;
+	border:none;
+}
+
+textarea.sheet-journal  {
+    height: 36px;
+	resize:vertical;
+	background-color:#FFFFFF;
+	width:94%;
+	border:none;
+}
+
+.sheet-genPages{
+	grid-template-columns: 50% auto;
+	display: grid;
+	grid-template-areas:
+		"Data	Info";
+	grid-gap: 10px;
+	margin-left:-5px;
+	width:838px;
+}
+
+.sheet-lhs {
+	grid-area:Data;
+	display:grid;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	background-color:#0a2351;
+	color:#cccccc;
+}
+
+.sheet-sixCol{
+	grid-template-columns:4em 6em 4em auto;
+	display: grid;
+}
+
+.sheet-rhs {
+	grid-area:Info;
+	display:grid;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	background-color:#0a2351;
+	color:#cccccc;
+}
+
+.sheet-GenTxt {
+	color:#CCFF99;	
+}
+
+/* ####################################################### */
+/* #################### Full ############################ */
+/* ####################################################### */
+
+.sheet-pc1Grid{
+	display: grid;
+	grid-template-columns: 21em auto;
+	grid-template-areas:
+		"Stats	Status";
+	grid-gap: 0px;
+	margin-left:-5px;
+	width:838px;
+}
+
+.sheet-statBlock {
+	grid-area:Stats;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	background-color:#21152B;
+	color:#cccccc;
+}
+
+.sheet-healthBlock{
+	background-color:#4e0000;
+	grid-area:Status;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	color:#cccccc;
+}
+
+.sheet-conditionsBlock {
+	background-color:#4e0000;
+	grid-area:Status;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	color:#cccccc;
+}
+
+.sheet-statBlock-Grid {
+	grid-template-columns: 7.5em 4.5em 4em;
+	display:grid;
+	padding-bottom:5px;
+	padding-top:5px;
+	font-size:12px;	
+}
+.sheet-hlthBlockW-Grid {
+	grid-template-columns: 12em 6em 12em 6em;
+	display:grid;
+	padding-bottom:5px;
+	padding-top:5px;
+	justify-contents:center;
+	align-items:center;
+	font-size:12px;	
+	
+}
+.sheet-hlthBlockW-Grid {
+	grid-template-columns: 10em 5em 10em 5em 10em 5em 10em 7.5em 6em;
+	color:#8A0303;	
+}
+
+h4,
+h3 {
+	color:#cccccc;
+}
+.sheet-charBio {
+	border:2px solid black;
+	border-radius:5px;
+	background-color:#21152B;
+	color:#cccccc;
+	margin-left:-5px;
+	width:828px;
+	padding:5px;
+}
+
+.sheet-bioText2,
+.sheet-bioText {
+	background-color:#4E3366;
+	color:#cccccc;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000;
+	width:14em;
+}
+.sheet-bioText2 {
+	background-color:#f93;
+	color:#1f1f1f;
+}
+
+.sheet-bio0 {
+	grid-template-columns: 7em 15em 7em 30em ;
+	display:grid;
+	padding:5px;
+}
+
+.charsheet input[type=number].bioNum {
+	width: 5em;
+	font-size: 12px;
+	text-align:right;
+	color:#cccccc !important;
+	background-color:#4E3366;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000;
+}
+
+.sheet-statusBlock-Grid {
+	grid-template-columns: 7.5em 5em 2em auto;
+	display:grid;
+	font-size:12px;	
+	padding:5px;
+	align-items: center;
+}
+
+.sheet-StatText{
+	pointer-events:none;
+	width:3em; 
+	text-align:center;
+	color:#cccccc;
+	font-size:16px;
+	font-weight:bold;	
+}
+
+.charsheet input[type=text].sheet-StatText readonly {
+	pointer-events:none;
+	background-color:transparent;
+	border:none;
+}
+
+.sheet-roText{
+	
+	width:47px; 
+	text-align:center;
+	font-size:12px;
+	color:#cccccc;
+	background-color:transparent;
+}
+
+.sheet-genSkldl,
+.sheet-genSklTxt {
+	pointer-events:none;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	color:#cccccc;
+	background-color:transparent;
+	border:none;
+}
+
+.charsheet input[type=text].sheet-roText {
+	cursor: default;
+	height:20px;
+	font-size:12px;
+	width:3.5em;
+} 
+
+.charsheet input[type=number].sheet-spdNum {
+	width: 3.7em;
+	font-size: 12px;
+	height: 20px;
+	text-align:right;
+	color:#cccccc;
+}
+.charsheet button[type=action].actInertBtn {
+	color:#cccccc;
+	font-size:13px;
+	background-color:transparent;
+	width:5.5em;
+	height:22px;
+	border:none;
+	margin-top:4px;
+	pointer-events:none;
+	margin-left:1em;
+	font-family:Contrail One, Helvetica, sans-serif;
+}
+.charsheet button[type=action].actStatBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#cccccc;
+	font-size:13px;
+	border-style: solid;
+	background-color: #8a0303;
+	border-color: #000;
+	width:5.5em;
+	height:22px;
+	margin-left:1em;
+	font-family:Contrail One, Helvetica, sans-serif;
+}
+
+.charsheet button[type=action].actGenNextBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 2px;
+	color:#b68013;
+	font-size:14px;
+	border-style: solid;
+	background-color: #8a0303;
+	border-color: #000;
+	border-radius:5px;
+	width:4em;
+	height:22px;
+	font-weight:bold;
+} 
+
+.charsheet button[type=action].actGenNextBtn:hover {
+	background-color:#ac2525;
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+.sheet-genStatTxt {
+	font-family:Contrail One, Helvetica, sans-serif;
+	font-size:16px;
+
+}
+
+.charsheet button[type=action].actBtn2 {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	font-size:11px;
+	border-style: solid;
+	background-color: #f1f1f1;
+	border-color: #000;
+	width:5em;
+	height:20px;
+	margin-left:1em;
+	font-family:Contrail One, Helvetica, sans-serif;
+}
+
+.sheet-cdiv {
+	margin-top:-12px;
+}
+
+.charsheet button[type=action].actStatBtn:hover {
+	background-color:#ED8B9C; 
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.charsheet button[type=action].actBtn2:hover {
+	background-color: rgb(195,251,227,0.5);
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.sheet-pcHdr{
+	color:#CCCCCC;
+	padding:10px 5px 10px 5px;
+	width:828px;
+	margin-left:-5px;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	background-color:#CC5500;
+
+}
+
+.charsheet div.sheet-FullSheet {
+    display: none;    
+}
+
+.charsheet input.sheet-toggleFullSheet:checked ~ div.sheet-FullSheet {
+    display: inline;
+}
+
+
+.sheet-showI  {
+	color:#FF0000;
+	background-color:transparent; 
+	font-size:12px;
+	pointer-events:none;
+}
+
+.charsheet input[type=text].sheet-roStat {
+	pointer-events:none;
+	width:4em; 
+	text-align:center;
+	color:#cccccc;
+	font-size:12px;
+	height:20px;
+} 
+
+.charsheet input[type=number].staNum {
+	text-align: right;
+	height: 20px;
+	width: 4em;
+	font-size:12px;	
+	color:#cccccc;
+	background-color:#8A0303;
+}
+
+.charsheet input[type=number].coreNum {
+	text-align: right;
+	height: 24px;
+	width: 4em;
+	font-size:12px;	
+	color:#cccccc;
+	background-color:#4E3366;
+}
+
+.sheet-wpnGrp {
+	border: 2px;
+	border-style:solid;
+	border-color:#000;
+	padding:5px;
+	align-items: center;
+}
+
+.sheet-WeaponBlockGrid {
+	grid-template-columns: 8em 17em;
+	display:grid;
+	font-size:11px;	
+}
+
+.sheet-WeaponBlock {
+	grid-template-columns: 33% 34% 33%;
+	display:grid;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	background-color:#4e0000;
+	color:#ffffff;
+	width:835px;
+	margin-left:-5px;
+}
+
+.charsheet input[type=text].sheet-wpnTxt {
+	width:14em;
+	font-size:11px;
+	height:24px;
+	color:#ffffff;
+	background-color:#8A0303;
+	border:1px solid #000;
+}
+.charsheet button[type=action].myActBtn2 {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#cccccc;
+	font-size:11px;
+	border-style: solid;
+	background-color: #702C91; 
+	border-color: #000;
+	font-family:Contrail One, Helvetica, sans-serif;
+	width:4em;
+}
+.charsheet button[type=action].myActBtn2:hover {
+	background-color: #8d56a7; 
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.charsheet button[type=action].myActBtn3 {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#cccccc;
+	font-size:14px;
+	border-style: solid;
+	background-color: #702C91; 
+	border-color: #000;
+	width:7em;
+	height:20px;
+	font-family:Contrail One, Helvetica, sans-serif;
+}
+
+.charsheet button[type=action].myActBtn3:hover {
+	background-color: #8d56a7; 
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.charsheet input[type=number].sheet-wpnNum {
+	width: 4em;
+	font-size: 12px;
+	height: 20px;
+	text-align:right;
+	border:1px solid #000;
+	color:#ffffff;
+	background-color:#8a0303;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnDamage .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnDamage .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnDamage .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnDamage .inlinerollresult.importantroll,
+.sheet-rolltemplate-wpnDamage .inlinerollresult,
+.sheet-rolltemplate-wpnDamage .inlinerollresult.fullcrit,
+.sheet-rolltemplate-wpnDamage .inlinerollresult.fullfail,
+.sheet-rolltemplate-wpnDamage .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:white;
+	background-color:#702C91;
+}
+
+.sheet-rolltemplate-wpnDamage .sheet-content {
+	padding:0.5em;
+}
+
+.sheet-rolltemplate-wpnDamage .sheet-container {
+	background-color: #8A0303;
+	border: 2px solid;
+	border-color: #1f1f1f;
+	width: 100%;
+	border-radius: .5em;
+	line-height:1.5em;
+	color:#cccccc;
+}
+
+.sheet-rolltemplate-wpnDamage .sheet-hdr {
+	font-size:14px;
+	font-weight:bold;
+	color:#cccccc;
+	padding:0.5em;
+	background-color:transparent;
+}
+
+.sheet-rolltemplate-custRoll .sheet-container {
+	background-color: #ccc;
+	border: 2px solid;
+	border-color: #1f1f1f;
+	width: 100%;
+	border-radius: 0.5em;
+	line-height: 1.5em;
+	color: #600;
+}
+
+.sheet-rolltemplate-custRoll .sheet-hdr {
+	font-size:14px;
+	font-weight:bold;
+	color:#600;
+	padding:0.5em;
+	background-color:#7b8389;
+		border-radius: 0.3em 0.3em 0em 0em;
+
+}
+.sheet-rolltemplate-custRoll .sheet-content {
+	padding:0.5em;
+}
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-custRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-custRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-custRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-custRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-custRoll .inlinerollresult,
+.sheet-rolltemplate-custRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-custRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-custRoll .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:white;
+	background-color:#702C91;
+}
+/*Weapon Section show/hide config*/
+/*Heavy Weapons*/
+.sheet-hvyWpn:checked ~ *.sheet-hvyWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideHvyWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-hvyWpn:checked + span.sheet-is-HideHvyWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideHvyWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-hvyWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-hvyWpn:checked + span.sheet-is-HideHvyWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+/*Moderate Weapons*/
+.sheet-modWpn:checked ~ *.sheet-modWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideModWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-modWpn:checked + span.sheet-is-HideModWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideModWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-modWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-modWpn:checked + span.sheet-is-HideModWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+/*Right Fist*/
+.sheet-fiaWpn:checked ~ *.sheet-fiaWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideFiaWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-fiaWpn:checked + span.sheet-is-HideFiaWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideFiaWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-fiaWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-fiaWpn:checked + span.sheet-is-HideFiaWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+/*Light Weapon 1*/
+.sheet-litWpn:checked ~ *.sheet-litWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideLitWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-litWpn:checked + span.sheet-is-HideLitWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideLitWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-litWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-litWpn:checked + span.sheet-is-HideLitWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+/*Light Weapon 2*/
+.sheet-ligWpn:checked ~ *.sheet-ligWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideLigWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-ligWpn:checked + span.sheet-is-HideLigWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideLigWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-ligWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-ligWpn:checked + span.sheet-is-HideLigWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+/*Left Fist*/
+.sheet-fibWpn:checked ~ *.sheet-fibWpnConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideFibWpn::after { 
+	content: "-";
+}
+
+.charsheet .sheet-fibWpn:checked + span.sheet-is-HideFibWpn::after { 
+	content: "+";
+}
+
+.charsheet span.sheet-is-HideFibWpn {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+    background: #702c91; 
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -2.9em;
+}
+
+.charsheet input.sheet-fibWpn {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin:3px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-fibWpn:checked + span.sheet-is-HideFibWpn {
+    background: #702c91;
+    border-radius: 4px;
+	color: white;
+}
+
+
+.sheet-armor {
+	background-color: #21152B;
+	color:#cccccc;
+	margin-left:-5px;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-top: 2px solid #000;
+	border-bottom: 3px solid #000;
+	border-radius:5px;
+	width:834px;
+}
+
+.sheet-armorBlock {
+	display:grid;
+	grid-template-columns: 5em 5em 54em;
+	grid-gap:0px;
+	align-items: center;
+	justify-content:center;
+	align-items: center;
+	border-bottom: solid;
+	border-color:#4e0000;	
+}
+
+.sheet-armorSta,
+.sheet-armorLoc,
+.sheet-armorVlu,
+.sheet-armorGrp {
+	display:grid;
+	color:#FFFFFF;
+	align-items:center;
+	text-align:center;
+	font-size:11px;
+}
+.sheet-armorGrp {
+	display:block;
+	pointer-events:none;
+}
+.sheet-armorVlu {
+	display:block;
+	pointer-events:none;
+}
+.sheet-armorLoc {
+	grid-template-columns: 7em 14em 5em 5em 16em 16em;
+	diplay:grid;
+	text-align:left;
+}
+.charsheet input[type=text].sheet-arTxt2,
+.charsheet input[type=text].sheet-arTxt {
+	width:32%;
+	height:24px;
+	font-size:11px;
+	color:#cccccc;
+	background-color:#4E3366;
+}
+.charsheet input[type=text].sheet-arTxt2 {
+	background-color:#0F52BA;
+}
+
+.charsheet input[type=number].arNum {
+	color:#cccccc;
+	text-align:right;
+	font-size:11px; 
+	height:24px;
+	background-color:#355E3B;
+	width:100%;
+}
+
+.sheet-skillBlock-Grid {
+	grid-template-columns: 10em 4.5em 8em 5em auto;
+	display:grid;
+	font-size:12px;	
+	align-items: center;
+}
+
+.sheet-fullSkill-Grid {
+	grid-template-columns: 4em 8em 3em 5.5em 4.5em 2em auto;
+	display:grid;
+	font-size:14px;	
+	align-items: center;
+	background-color:#1d2e28;
+	color:#cccccc;
+	border: 2px solid black;
+	padding:5px;
+	border-radius: 5px 5px 5px 5px;
+	margin-left:-5px;
+	width:828px;	
+}
+
+.charsheet button[type=action].skl-btn {
+	height: 16px;
+	border: 1px solid black;
+	margin-left: 5px;
+	font-weight: bold;
+	width:5em;
+	font-size:11px;
+	border-radius: 5px;	
+	color:#1d2e28;	
+}
+
+.charsheet button[type=action].skl-btn:hover {
+	background-color:rgb(255,255,255,0.5);
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.charsheet button[type=action].genStaBtn:hover,
+.charsheet button[type=action].genSklBtn:hover {
+	background-color:#666666;
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+.charsheet button[type=action].genSklBtn {
+	height: 16px;
+	border: 1px solid black;
+	margin-left: 5px;
+	font-weight: bold;
+	width:8em;
+	font-size:11px;
+	border-radius: 5px;
+	background-color:#333333;
+}
+.charsheet button[type=action].genStaBtn {
+	height: 16px;
+	border: 1px solid black;
+	margin-left: 5px;
+	width:5em;
+	font-family:Contrail One, Helvetica, sans-serif;
+	font-size:14px;
+	border-radius: 5px;
+	background-color:#333333;
+}
+
+.charsheet input[type=number].genSklNum {
+	text-align: right;
+	height: 22px;
+	width: 4.5em;
+	font-size:11px;
+	background-color:#6082B6;
+	color:#222222;	
+	border-color:#000;
+}
+
+.charsheet input[type=number].skllNum {
+	text-align: right;
+	height: 22px;
+	width: 4.5em;
+	font-size:11px;
+	background-color:rgb(255,255,255,0.3); 
+	color:#1d2e28;	
+	border-color:#000;
+	color:#cccccc;
+}
+.sheet-inventoryBlock {
+	grid-template-columns: 25% 25% 25% auto;
+	display:grid;
+	border:2px solid black;
+	border-radius:5px;
+	margin-left:-5px;
+	width:827px;
+	background-color:#1d2e28;
+	color:#cccccc;
+	align-items:top;
+	padding:5px;
+} 
+.sheet-inventoryBlock .repitem{
+	break-inside: avoid;
+}
+.sheet-inventoryCarrier2,
+.sheet-inventoryCarrier {
+	border: 2px ridge black;
+	padding: 5px; 
+	border-radius:5px;
+	font-size:10px;
+}
+.sheet-inventoryCarrier {
+	background-color:#336633;"
+}
+.sheet-inventoryCarrier2 {
+	background-color:#006600;"
+}
+textarea.sheet-invDesc {
+    height: 4em;
+	resize:vertical;
+	background-color:#FFFFFF;
+	border:1px solid black;
+	width:17.5em;
+	font-size:10px;
+	margin:0px;
+}
+.sheet-invSize2,
+.sheet-invSize {
+	font-size:10px;
+	width:2.5em;
+	max-height: 16px; 
+	/*margin-bottom:2px;*/
+	text-align:center;
+}
+.sheet-invSize2 {
+	font-size:11px;
+}
+.sheet-invItm {
+	background-color:#FFFFFF;
+	border:1px solid black;
+	font-size:11px;
+	width:150px;
+	margin-right:0px
+	padding-right:0px;
+}
+.sheet-inv:checked ~ *.sheet-invConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-HideInv::after { 
+	font-family: "pictos";
+	content: "[";
+}
+
+.charsheet .sheet-inv:checked + span.sheet-is-HideInv::after { 
+	font-family: "pictos";
+	content: "}";
+}
+
+.charsheet span.sheet-is-HideInv {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+	background-color:transparent;
+	color: white; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -18px;
+	padding:0px;
+}
+
+.charsheet input.sheet-inv {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin: -10px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-inv:checked + span.sheet-is-HideInv {
+	background-color:transparent;
+    border-radius: 4px;
+	color: white;
+}
+/* ####################################################### */
+/* #################### General ########################## */
+/* ####################################################### */
+
+select[readonly] {
+    pointer-events: none;
+}
+
+.sheet-hr{
+    margin: 9px 0;
+    border: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.sheet-input_label {
+	display:inline-block;
+	font-weight:bold;
+}
+
+textarea.invItem {
+	width: 8em;
+	height:5em;
+	border: 1px solid white;
+	resize:none;
+	font-size:10px;		
+}
+
+/* ########################################################### */
+/* #################### Tab Control ########################## */
+/* ########################################################### */
+
+.charsheet div.sheet-npc1 {
+    display: none;   
+}
+
+.charsheet input.sheet-toggleNPC1Sheet:checked ~ div.sheet-npc1 {
+    display: inline;
+}
+
+div.sheet-tab-contentb {
+	display: none; 
+}
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2,
+input.sheet-tab3:checked ~ div.sheet-tab3,
+input.sheet-tab4:checked ~ div.sheet-tab4,
+input.sheet-tab5:checked ~ div.sheet-tab5,
+input.sheet-tab6:checked ~ div.sheet-tab6,
+input.sheet-tab7:checked ~ div.sheet-tab7,
+input.sheet-tab8:checked ~ div.sheet-tab8 {
+    display: block;
+}
+
+input.sheet-tab {
+    width: 100px;
+    height: 20px;
+    position: relative;
+    top: 0;
+    left: 5px;
+    margin: -1.5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+input.sheet-tab + span::before {
+    content:attr(title);
+    border: solid 1px #a8a8a8;
+    border-bottom-color: black;
+    text-align: center;
+    display: inline-block;
+    background: #4E0000;
+    background: -moz-linear-gradient(to top, #666666	, #fff, #666666	);
+    background: -webkit-linear-gradient(to top, #666666	, #fff, #666666	);
+    background: -ms-linear-gradient(to top, #666666	, #fff, #666666	);
+    background: -o-linear-gradient(to top, #66666	, #fff, #666666	);
+    background: linear-gradient(to top, #666666	, #fff, #666666	);
+	font-family:Contrail One, Helvetica, sans-serif;
+	font-size:14px;
+	width: 100px;
+    height: 20px;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+input.sheet-tab:checked + span::before {
+    background: #4E0000;
+    background: -moz-linear-gradient(to top, #4E0000	, #fff, #4E0000	);
+    background: -webkit-linear-gradient(to top, #4E0000	, #fff, #4E0000	);
+    background: -ms-linear-gradient(to top, #4E0000	, #fff, #4E0000	);
+    background: -o-linear-gradient(to top, #4E0000	, #fff, #4E0000	);
+    background: linear-gradient(to top, #4E0000	, #fff, #4E0000	);
+	font-family:Contrail One, Helvetica, sans-serif;
+	font-size:14px;
+    border-bottom-color: #fff;
+}
+
+input.sheet-tab:not(:first-child) + span::before {
+    border-left: none;
+}
+
+input.sheet-tab1 + span::before {
+	display:none;
+}
+
+input.sheet-tab2 + span::before {
+  	left: 133px;
+	display:none;
+}
+
+input.sheet-tab3 + span::before {
+	left: 234px;
+	display:none;
+}
+
+input.sheet-tab4 + span::before {
+    left: 336px;
+	display:none;
+}
+
+input.sheet-tab5 + span::before {
+    left: 438px;
+	display:none;
+}
+
+input.sheet-tab6 + span::before {
+    left: 540px;
+	display:none;
+}
+
+input.sheet-tab7 + span::before {
+    left: 642px;
+	display:none;
+}
+
+input.sheet-tab8 + span::before {
+    left: 744px;
+	display:none;
+}
+
+div.sheet-tab-content {
+	font-family: 'Verdana';
+    margin: 0;
+    padding: 1px;
+	padding-left:5px
+}
+
+.charsheet div.sheet-QSSheet{
+    display: none;    
+}
+		          
+.charsheet input.sheet-toggleQSSheet:checked ~ div.sheet-QSSheet{
+    display: inline;
+}
+
+.sheet-toggleQSSheet ~ *.sheet-QSSheet{
+	display:none;
+}
+
+.charsheet input.sheet-HideSheetQS:checked ~ div.sheet-SheetQS {
+    display: inline;
+}
+
+
+
+div.sheet-tab-contenta { 
+	display: none; 
+}
+
+input.sheet-tab1a:checked ~ div.sheet-tab1a,
+input.sheet-tab2a:checked ~ div.sheet-tab2a,
+input.sheet-tab3a:checked ~ div.sheet-tab3a,
+input.sheet-tab4a:checked ~ div.sheet-tab4a,
+input.sheet-tab5a:checked ~ div.sheet-tab5a,
+input.sheet-tab6a:checked ~ div.sheet-tab6a {
+    display: block;
+}
+
+input.sheet-taba {
+    width: 100px;
+    height: 20px;
+    position: relative;
+    top: 0;
+    left: 5px;
+    margin: -1.5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;	
+}
+
+input.sheet-tab2a + span::before {
+  	left: 133px;
+}
+
+input.sheet-tab3a + span::before {
+  	left: 234px;
+}
+
+input.sheet-tab4a + span::before {
+	left: 336px;
+}
+
+input.sheet-tab5a + span::before {
+	left: 438px;
+}
+
+div.sheet-tab-contenta {
+	font-family: 'Verdana';
+    margin: 0;
+    padding: 1px;
+	padding-left:5px
+}
+
+/* ############################################################### */
+
+/* #################### End Tab Control ########################## */
+/* ############################################################### */
+
+
+/* ############################################################### */
+/* #################### Congig Button ############################ */
+/* ############################################################### */
+
+.sheet-HideConfig:checked ~ *.sheet-config {
+	display:none;
+}
+
+.charsheet span.sheet-is-config::after { 
+	content: "^";
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config::after { 
+	content: "v";
+}
+
+.charsheet span.sheet-is-config {
+    text-align: center;
+    display: inline-block;    
+    width: 5%;
+    height: 16px;
+    font-size: 9px;
+    background: black; 
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -5%;
+}
+
+.charsheet input.sheet-HideConfig {
+     width: 5%;
+    height: 16px;
+    cursor: pointer;	
+    margin-left: auto;
+    margin-top: auto;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config {
+    background: black;
+    border-radius: 4px;
+	color: white;
+}
+
+/* ############################################################### */
+/* #################### Congig Button ############################ */
+/* ############################################################### */
+/* ############################################################### */
+/* ############# ADV/DisADV radio Buttons ######################## */
+/* ############################################################### */
+input[type="checkbox"].adv,
+input[type="checkbox"].nml,
+input[type="checkbox"].dis {
+   	margin-right: 1em;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 7em;
+    height: 18px;
+    font-size: 11px;
+	opacity: 0;
+	z-index: 9999;
+}
+input[type="checkbox"].adv + span::before,
+input[type="checkbox"].nml + span::before,
+input[type="checkbox"].dis + span::before {
+	
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	
+   	margin-right: 1em;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.5em;
+    height: 18px;
+    font-size: 14px;
+	border: 2px solid black;
+	background-color:#333;
+	color:#ccc;
+	margin-left: -7.5em;
+	font-variant: small-caps;
+}
+input[type="checkbox"].adv + span::before {
+    content: "Adv.";
+}
+input[type="checkbox"].dis + span::before {
+    content: "DisAdv.";
+}
+input[type="checkbox"].nml + span::before {
+    content: "Normal";
+}
+input[type="checkbox"].adv:checked + span::before {
+    content: "Adv.";
+	background-color:#ccc;
+	color:#333;
+}
+input[type="checkbox"].dis:checked + span::before {
+    content: "DisAdv.";
+	background-color:#ccc;
+	color:#333;
+}input[type="checkbox"].nml:checked + span::before {
+    content: "Normal";
+	background-color:#ccc;
+	color:#333;
+}
+
+input[type="checkbox"].crit {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+	opacity: 0;
+	z-index: 9999;
+	margin-left:12px;
+}
+input[type="checkbox"].crit + span::before {
+	
+	border-radius: 50%;
+	border: 1px solid #000;
+	text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+	background-color:#1f1f1f;
+	color:#ccc;
+	margin-left: -13px;
+}
+input[type="checkbox"].crit + span::before {
+    content: "";
+}
+
+input[type="checkbox"].crit:checked + span::before {
+    content: "";
+	background-color:green;
+}
+
+input[type="checkbox"].sklPro {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+input[type="checkbox"].sklPro + span::before {
+	
+	border-radius: 50%;
+	border: 1px solid #000;
+	text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+	background-color:#1f1f1f;
+	color:#ccc;
+	margin-left: -13px;
+}
+
+input[type="checkbox"].sklPro + span::before {
+    content: "";
+}
+
+input[type="checkbox"].sklPro:checked + span::before {
+    content: "";
+	background-color:green;
+}
+
+/*##############Skill progress Tracks #################*/
+.sheet-progression {
+	align-items:center;
+}
+div.sheet-skillAttempts,
+div.sheet-skillSuccess {
+    width: 8em;
+    height: 16px;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+	font-size:11px;
+	color: #cccccc;
+	display:inline-block;
+	margin-right:-5px;
+	margin-left:1px;
+}
+div.sheet-skillAttempts {
+    width: 13em;
+}
+
+input.sheet-skillSuccess[value="0"] ~ div.sheet-skillSuccess {
+    background: #1f1f1f;
+}
+input.sheet-skillSuccess[value="0"] ~ div.sheet-skillSuccess:before {
+        content:"Skill Success";
+}
+input.sheet-skillSuccess[value="1"] ~ div.sheet-skillSuccess {
+    background: linear-gradient(to left, #1f1f1f 80%, green 80%); 
+}
+input.sheet-skillSuccess[value="1"] ~ div.sheet-skillSuccess:before {
+        content:"1 Success";
+}
+input.sheet-skillSuccess[value="2"] ~ div.sheet-skillSuccess {
+    background: linear-gradient(to left, #1f1f1f 60%, green 60%);
+}
+input.sheet-skillSuccess[value="2"] ~ div.sheet-skillSuccess:before {
+        content:"2 Successes";
+}
+input.sheet-skillSuccess[value="3"] ~ div.sheet-skillSuccess {
+    background: linear-gradient(to left, #1f1f1f 40%, green 40%);
+}
+input.sheet-skillSuccess[value="3"] ~ div.sheet-skillSuccess:before {
+        content:"3 Successes";
+}
+input.sheet-skillSuccess[value="4"] ~ div.sheet-skillSuccess {
+    background: linear-gradient(to left, #1f1f1f 20%, green 20%);
+}
+input.sheet-skillSuccess[value="4"] ~ div.sheet-skillSuccess:before {
+        content:"4 Successes";
+}
+input.sheet-skillSuccess[value="5"] ~ div.sheet-skillSuccess {
+    background: green;
+    color: yellow;
+}
+input.sheet-skillSuccess[value="5"] ~ div.sheet-skillSuccess:before {
+        content: "+1 to Skill!";
+}
+
+input.sheet-skillAttempts[value="0"] ~ div.sheet-skillAttempts {
+    background: #1f1f1f;
+}
+input.sheet-skillAttempts[value="0"] ~ div.sheet-skillAttempts:before {
+        content:"Skill Attempts";
+}
+input.sheet-skillAttempts[value="1"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 90%, green 90%); 
+}
+input.sheet-skillAttempts[value="1"] ~ div.sheet-skillAttempts:before {
+        content:"1 Attempt";
+}
+input.sheet-skillAttempts[value="2"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 80%, green 80%);
+}
+input.sheet-skillAttempts[value="2"] ~ div.sheet-skillAttempts:before {
+        content:"2 Attempts";
+}
+input.sheet-skillAttempts[value="3"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 70%, green 70%);
+}
+input.sheet-skillAttempts[value="3"] ~ div.sheet-skillAttempts:before {
+        content:"3 Attempts";
+}
+input.sheet-skillAttempts[value="4"] ~ div.sheet-skillAttempts {
+
+    background: linear-gradient(to left, #1f1f1f 60%, green 60%);
+}
+input.sheet-skillAttempts[value="4"] ~ div.sheet-skillAttempts:before {
+        content:"4 Attempts";
+}
+
+input.sheet-skillAttempts[value="5"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 50%, green 50%); 
+}
+input.sheet-skillAttempts[value="5"] ~ div.sheet-skillAttempts:before {
+        content:"5 Attempts";
+}
+input.sheet-skillAttempts[value="6"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 40%, green 40%);
+}
+input.sheet-skillAttempts[value="6"] ~ div.sheet-skillAttempts:before {
+        content:"6 Attempts";
+}
+input.sheet-skillAttempts[value="7"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 30%, green 30%);
+}
+input.sheet-skillAttempts[value="7"] ~ div.sheet-skillAttempts:before {
+        content:"7 Attempts";
+}
+input.sheet-skillAttempts[value="8"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 20%, green 20%);
+}
+input.sheet-skillAttempts[value="8"] ~ div.sheet-skillAttempts:before {
+        content:"8 Attempts";
+}
+input.sheet-skillAttempts[value="9"] ~ div.sheet-skillAttempts {
+    background: linear-gradient(to left, #1f1f1f 10%, green 10%);
+}
+input.sheet-skillAttempts[value="9"] ~ div.sheet-skillAttempts:before {
+        content:"9 Attempts";
+}
+input.sheet-skillAttempts[value="10"] ~ div.sheet-skillAttempts {
+    background: green;
+}
+input.sheet-skillAttempts[value="10"] ~ div.sheet-skillAttempts:before {
+        content: "+1 to Skill!";
+		color: yellow;
+}
+
+.charsheet button[type=action].sklProgBtn {
+	font-size:18px;
+	background-color:transparent;
+	border:none;
+	color:#999999;
+	font-family:Pictos;
+	margin-left:0px;
+	margin-right:1px;
+	width:5px;
+	padding-left:0px;
+	pagging-right:0;
+}
+.charsheet button[type=action].sklProgBtn:hover {
+	background-position: 0 -28px;
+	color:#cccccc;
+}
+/*########################################*/
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-content,
+.sheet-rolltemplate-CoreStatRoll .sheet-content,
+.sheet-rolltemplate-SkillRoll .sheet-content {
+	padding:0.5em;
+}
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-container,
+.sheet-rolltemplate-SkillRoll .sheet-container {
+	background-color: #616d69;
+	color:#cccccc;
+	border: 2px solid;
+	border-color: #1f1f1f;
+	width: 100%;
+	border-radius: .5em;
+	line-height:1.5em;
+}
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-hdr,
+.sheet-rolltemplate-SkillRoll .sheet-hdr {
+	font-size:14px;
+	font-weight:bold;
+	padding:0.5em;
+	background-color:#1d2e28;
+	color:#cccccc;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnSkillRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-CoreStatRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-CoreStatRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-CoreStatRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-CoreStatRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-SkillRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-SkillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-SkillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-SkillRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-wpnSkillRoll .inlinerollresult,
+.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-wpnSkillRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-CoreStatRoll .inlinerollresult,
+.sheet-rolltemplate-CoreStatRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-CoreStatRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-CoreStatRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-SkillRoll .inlinerollresult,
+.sheet-rolltemplate-SkillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-SkillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-SkillRoll .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:#000;
+	background-color:transparent;
+}
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-rollResult,
+.sheet-rolltemplate-CoreStatRoll .sheet-rollResult,
+.sheet-rolltemplate-SkillRoll .sheet-rollResult {
+	font-size:20px;
+	text-align:center;
+}
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-adv,
+.sheet-rolltemplate-CoreStatRoll .sheet-adv,
+.sheet-rolltemplate-SkillRoll .sheet-adv {
+	text-align:center;
+	margin-top:5px;
+}
+
+.sheet-rolltemplate-wpnSkillRoll .sheet-subHdr,
+.sheet-rolltemplate-CoreStatRoll .sheet-subHdr,
+.sheet-rolltemplate-SkillRoll .sheet-subHdr {
+	text-align:center;
+	margin-top:-5px;
+	padding-bottom:5px;
+}
+
+.sheet-rolltemplate-CoreStatRoll .sheet-container {
+	color:#cccccc;
+	border: 2px solid;
+	border-color: #1f1f1f;
+	width: 100%;
+	border-radius: .5em;
+	line-height:1.5em;
+	background-color:#4E3366;
+}
+
+.sheet-rolltemplate-CoreStatRoll .sheet-hdr  {
+	font-size:14px;
+	font-weight:bold;
+	padding:0.5em;
+	background-color:#21152b; 
+	color:#cccccc;
+}
+.sheet-rolltemplate-wpnSkillRoll .sheet-wrn {
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding:0.5em;	
+	color:#990000;
+}
+.sheet-mylabel{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.sheet-mylabel input{
+  display: none;
+  font-size:11px;
+}
+
+.sheet-slidinggroove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ababab;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.sheet-slidinggroove:after{
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s ease;
+}
+
+input:checked + .sheet-slidinggroove{
+  background: #5fcf80;
+}
+
+input:checked + .sheet-slidinggroove:after{
+transform: translateX(13px);
+}
+
+.mylabel{
+	position: relative;
+	display:inline-block;
+	width: 50px;
+	height: 18px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+
+.mylabel input{
+	display: none;
+}
+
+.slidinggroove{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 32px;
+	height: 18px;
+	background: #ababab;
+	border: 1px solid black;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+	display:inline-block;
+}
+
+.slidinggroove:after{
+	position: absolute;
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	top: 1px;
+	left: 1px;
+	transition: all 0.3s ease;
+}
+
+input:checked + .slidinggroove{
+	background: #5fcf80;
+}
+
+input:checked + .slidinggroove:after{
+transform: translateX(14px);
+}
+
+.labelterm{
+	position: relative;
+	margin-left: 36px;
+	font-size: 12px;
+	color: #1f1f1f;
+	top: 1px;
+	width:60px;
+}
+
+.sheet-3colHdr{
+	grid-template-columns: 25% auto 25%;
+	display: grid;
+}
+.charsheet button[type=action].myActBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#cccccc;
+	font-size:14px;
+	border-style: solid;
+	background-color: #702C91; 
+	border-color: #000;
+	font-family:Contrail One, Helvetica, sans-serif;
+	width:6em;
+}
+
+.charsheet button[type=action].myActBtn:hover {
+	background-color: #8d56a7; 
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+
+.sheet-credit {
+	font-size:10px;
+	color:#ccc;
+	font-family:Contrail One, Helvetica, sans-serif;
+	text-align:right;
+}
+
+/*################## #customise Header section ##############################*/
+.charsheet div.sheet-tb5,
+.charsheet div.sheet-tb4,
+.charsheet div.sheet-tb3,
+.charsheet div.sheet-tb2,
+.charsheet div.sheet-tb1 {
+    display: none;   
+	text-align:center; 
+}
+
+.charsheet input.sheet-ttb5:checked ~ div.sheet-tb5,
+.charsheet input.sheet-ttb4:checked ~ div.sheet-tb4,
+.charsheet input.sheet-ttb3:checked ~ div.sheet-tb3,
+.charsheet input.sheet-ttb2:checked ~ div.sheet-tb2,
+.charsheet input.sheet-ttb1:checked ~ div.sheet-tb1 {
+    display: block;
+}
+
+.charsheet div.sheet-rt5,
+.charsheet div.sheet-rt4,
+.charsheet div.sheet-rt3,
+.charsheet div.sheet-rt2,
+.charsheet div.sheet-rt1 {
+    display: none;   
+}
+
+.charsheet input.sheet-trt5:checked ~ div.sheet-rt5,
+.charsheet input.sheet-trt4:checked ~ div.sheet-rt4,
+.charsheet input.sheet-trt3:checked ~ div.sheet-rt3,
+.charsheet input.sheet-trt2:checked ~ div.sheet-rt2,
+.charsheet input.sheet-trt1:checked ~ div.sheet-rt1 {
+    display: block;
+}
+
+.charsheet div.sheet-hb5,
+.charsheet div.sheet-hb4,
+.charsheet div.sheet-hb3,
+.charsheet div.sheet-hb2,
+.charsheet div.sheet-hb1 {
+    display: none;   
+}
+
+.charsheet input.sheet-thb5:checked ~ div.sheet-hb5,
+.charsheet input.sheet-thb4:checked ~ div.sheet-hb4,
+.charsheet input.sheet-thb3:checked ~ div.sheet-hb3,
+.charsheet input.sheet-thb2:checked ~ div.sheet-hb2,
+.charsheet input.sheet-thb1:checked ~ div.sheet-hb1 {
+    display: block;
+}
+
+.charsheet div.sheet-nb5,
+.charsheet div.sheet-nb4,
+.charsheet div.sheet-nb3,
+.charsheet div.sheet-nb2,
+.charsheet div.sheet-nb1 {
+    display: none;   
+}
+.charsheet input.sheet-tnb5:checked ~ div.sheet-nb5,
+.charsheet input.sheet-tnb4:checked ~ div.sheet-nb4,
+.charsheet input.sheet-tnb3:checked ~ div.sheet-nb3,
+.charsheet input.sheet-tnb2:checked ~ div.sheet-nb2,
+.charsheet input.sheet-tnb1:checked ~ div.sheet-nb1{
+    display: block;
+}
+.sheet-npctb {
+    display: block;   
+	text-align:center; 
+	padding-bottom:5px;
+}
+
+.sheet-rolltemplate-npcIni .inlinerollresult,
+.sheet-rolltemplate-npcIni .inlinerollresult.fullcrit,
+.sheet-rolltemplate-npcIni .inlinerollresult.fullfail,
+.sheet-rolltemplate-npcIni .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: none;
+	color:#000;
+	background-color:#FFFF99;
+}
+
+textarea.sheet-wpnMods {
+    height: 3em;
+	resize:vertical;
+	background-color:#8a0303;
+	border:1px solid black;
+	width:147px;
+	font-size:11px;
+	margin:0px;
+	color: #fff;
+}

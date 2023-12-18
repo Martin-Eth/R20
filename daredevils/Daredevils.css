@@ -1,0 +1,642 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rampart+One&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rampart+One&family=Special+Elite&display=swap');
+
+.charsheet{
+	background-color:#e8e8e8;	
+	width:840px;
+}
+.sheet-logo {
+	margin-top: -10px;
+	font-family: 'Rampart One';
+	font-size: 48px;
+	font-variant: small-caps;
+}
+/* #################### Page Control ########################## */
+.charsheet div.sheet-FullSheet{
+    display: none;    
+}
+.charsheet input.sheet-toggleFullSheet:checked ~ div.sheet-FullSheet {
+    display: grid;
+}
+.charsheet input.sheet-toggleCharGenSheet:checked ~ div.sheet-FullSheet {
+    display: none;
+}
+.charsheet input.sheet-toggleNPCSheet:checked ~ div.sheet-FullSheet {
+    display: none;
+}
+
+.charsheet div.sheet-CharGenSheet{
+    display: none;    
+}		          
+.charsheet input.sheet-toggleCharGenSheet:checked ~ div.sheet-CharGenSheet{
+    display: grid;
+}
+.charsheet input.sheet-toggleFullSheet:checked ~ div.sheet-CharGenSheet{
+    display: none;
+}
+.charsheet input.sheet-toggleNPCSheet:checked ~ div.sheet-CharGenSheet{
+    display: none;
+}
+.charsheet div.sheet-NPC{
+    display: none;    
+}
+.charsheet input.sheet-toggleNPCSheet:checked ~ div.sheet-NPC {
+    display: grid;
+}
+.charsheet input.sheet-toggleFullSheet:checked ~ div.sheet-NPC {
+    display: none;
+}
+.charsheet input.sheet-toggleCharGenSheet:checked ~ div.sheet-NPC {
+    display: none;
+}
+
+.sheet-config {
+	border-style: ridge;
+	border-color: gray;
+	padding: 5px;
+	color:#000;
+	background-color: #6298b8;
+	text-align:center;"
+}
+
+.sheet-HideConfig:checked ~ *.sheet-config {
+	display:none;
+}
+
+.charsheet span.sheet-is-config::after { 
+	content: "^";
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config::after { 
+	content: "v";
+}
+
+.charsheet span.sheet-is-config {
+    text-align: center;
+    display: inline-block;    
+    width: 5%;
+    height: 16px;
+    font-size: 9px;
+    background: black; 
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -5%;
+}
+
+.charsheet input.sheet-HideConfig {
+     width: 5%;
+    height: 16px;
+    cursor: pointer;	
+    margin-left: auto;
+    margin-top: auto;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config {
+    background: black;
+    border-radius: 4px;
+	color: white;
+}
+
+.sheet-pcHdr{
+	color:#CCCCCC;
+	padding:10px 5px 10px 5px;
+	width:828px;
+	margin-left:-5px;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	padding:5px;
+	background-color:#CC5500;
+}
+
+.sheet-mylabel{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.sheet-mylabel input{
+  display: none;
+  font-size:11px;
+}
+
+.sheet-slidinggroove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ababab;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.sheet-slidinggroove:after{
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s ease;
+}
+
+input:checked + .sheet-slidinggroove{
+  background: #5fcf80;
+}
+
+input:checked + .sheet-slidinggroove:after{
+transform: translateX(13px);
+}
+
+.mylabel{
+	position: relative;
+	display:inline-block;
+	width: 50px;
+	height: 18px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+
+.mylabel input{
+	display: none;
+}
+
+.slidinggroove{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 32px;
+	height: 18px;
+	background: #ababab;
+	border: 1px solid black;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+	display:inline-block;
+}
+
+.slidinggroove:after{
+	position: absolute;
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	top: 1px;
+	left: 1px;
+	transition: all 0.3s ease;
+}
+
+input:checked + .slidinggroove{
+	background: #5fcf80;
+}
+
+input:checked + .slidinggroove:after{
+transform: translateX(14px);
+}
+
+.labelterm{
+	position: relative;
+	margin-left: 36px;
+	font-size: 12px;
+	color: #1f1f1f;
+	top: 1px;
+	width:60px;
+}
+/* #################### Page Control ########################## */
+.sheet-FullSheet-Grid {
+	display: grid;
+	grid-template-areas:
+		'a a a a' 
+		'b b c d'
+		'b b c e';
+	grid-gap: 5px;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows:  auto auto auto auto auto;
+}
+.sheet-FullSheetb-Grid {
+	display: grid;
+	grid-template-areas:
+		'g h' 
+		'i i';
+	grid-gap: 5px;
+	grid-template-columns: 20.7em 43.3em;
+	grid-template-rows:  auto auto;
+}
+/* ##################### Basic Info ########################### */
+.sheet-Info {
+	grid-area: a;
+	border:2px solid black;
+	border-radius: 5px;
+	display:grid;
+	grid-template-columns:8em 14em 4em 7em 4.5em 8em 4em auto auto;
+	grid-gap:1px;
+	padding: 5px;
+	align-items:center;
+}
+.sheet-infoText {
+	width:12em;
+}
+.sheet-textAsNum {
+	width:5em;
+}
+/* ##################### Basic Info ########################### */
+
+/* ##################### Attributes ########################### */
+.sheet-attributes{
+	grid-area: b;	
+	border:2px solid black;
+	border-radius: 5px;
+	display:grid;
+	grid-template-columns: 6em 3em 3em 3em 3em 3em 4.75em;
+	grid-gap:5px;
+	padding: 5px;
+	align-items:center;
+	width:29em;
+}
+.sheet-hdr{
+	text-align: center;
+	font-weight: bold;
+	font-variant: small-caps;	
+}
+.sheet-attribText {
+	width:3.3em;
+	height: 20px;
+	text-align:center;
+	font-size:18;
+	font-weight:bold;	
+}
+.sheet-attribTextRO {
+	width:3em;
+	height: 20px;
+	text-align:center;
+	font-size:18;
+	font-weight:bold;
+	pointer-events:none;
+	border:none;
+}
+
+.charsheet button[type=action].effectDie,
+.charsheet button[type=action].savingThrow {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#000;
+	font-size:14px;
+	border-style:solid;
+	background-color:#ccc; 
+	border-color:#666;
+	width:2em;
+	height:20px;
+}
+.charsheet button[type=action].effectDie:hover,
+.charsheet button[type=action].savingThrow:hover {
+	background-color:#7b8389; 
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+.charsheet button[type=action].savingThrow:before {
+	content:"a ";
+	font-family: "dicefontd20";
+	font-size:10px;
+}
+.charsheet button[type=action].effectDie {
+	width:4em;
+	font-size:11px;
+}
+/* ##################### Attributes ########################### */
+
+/* ################### Roll Templates ######################### */
+.sheet-rolltemplate-skillRoll .sheet-container,
+.sheet-rolltemplate-effectDie .sheet-container,
+.sheet-rolltemplate-savingThrow .sheet-container {
+	width: 100%;
+	background-color:#e8e8e8;
+	color:#1f1f1f;;
+	border-radius: 5px;
+	border: 3px solid #446fa7;
+	text-align:center;
+	items-align:center:
+}
+.sheet-rolltemplate-skillRoll .sheet-hdr,
+.sheet-rolltemplate-effectDie .sheet-hdr,
+.sheet-rolltemplate-savingThrow .sheet-hdr {
+	font-size: 16px;
+	padding: 0.5em;
+	font-weight: bold;
+	background-color: #446fa7;
+	color: #2a1c01;
+}
+.sheet-rolltemplate-skillRoll .sheet-subHdr,
+.sheet-rolltemplate-effectDie .sheet-subHdr,
+.sheet-rolltemplate-savingThrow .sheet-subHdr {
+	font-size:16px;
+	padding:0.5em;
+	color:#1f1f1f;
+	text-align:center;
+	line-height:0.5em;
+	Font-weight:bold;
+}
+.sheet-rolltemplate-skillRoll .sheet-content,
+.sheet-rolltemplate-effectDie .sheet-content,
+.sheet-rolltemplate-savingThrow .sheet-content {
+	padding:0.5em;
+	line-height:20px;
+	padding-botton:5px;
+}
+.sheet-rolltemplate-skillRoll .sheet-crit,
+.sheet-rolltemplate-savingThrow .sheet-crit {
+	font-weight:bold;
+	/*background-color:#3F6;*/
+}
+.sheet-rolltemplate-skillRoll .sheet-fumble,
+.sheet-rolltemplate-savingThrow .sheet-fumble {
+	font-weight:bold;
+	/*background-color:#F66;*/
+	color:#1f1f1f;
+}
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skillRoll .inlinerollresult.importantroll,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skillRoll .inlinerollresult,
+.sheet-rolltemplate-skillRoll .inlinerollresult.importantroll, 
+.sheet-rolltemplate-skillRoll .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-effectDie .inlinerollresult.importantroll,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-effectDie .inlinerollresult,
+.sheet-rolltemplate-effectDie .inlinerollresult.importantroll, 
+.sheet-rolltemplate-effectDie .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-savingThrow .inlinerollresult.importantroll,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-savingThrow .inlinerollresult,
+.sheet-rolltemplate-savingThrow .inlinerollresult.importantroll, 
+.sheet-rolltemplate-savingThrow .inlinerollresult {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	line-height:1.1em;
+	background-color:#FFFF99;
+	border-color:#ffff99;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-skillRoll .inlinerollresult.fullfail,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-savingThrow .inlinerollresult.fullfail,
+.sheet-rolltemplate-savingThrow .inlinerollresult.fullfail {
+	border: 2px solid #6F6;
+}
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-skillRoll .inlinerollresult.fullcrit,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-savingThrow .inlinerollresult.fullcrit,
+.sheet-rolltemplate-savingThrow .inlinerollresult.fullcrit {
+	border: 2px solid #900;
+}
+/* ################### Roll Templates ######################### */
+
+/* ###################### Modifiers ########################### */
+.sheet-modifiers {
+	grid-area: e;
+	border:2px solid black;
+	border-radius: 5px;
+	display:block;
+	padding: 5px;
+	align-items:center;
+	width:11em;
+	font-size:12px;
+	font-weight:bold;
+}
+/* ###################### Modifiers ########################### */
+
+/* ###################### Derived ########################### */
+.sheet-calculated {
+	grid-area: d;
+	border:2px solid black;
+	border-radius: 5px;
+	display:inline;
+	padding: 5px;
+	align-items:bottom;
+	width:11em;
+	font-size:12px;
+	font-weight:bold;
+}
+.sheet-dispText{
+	font-size:16px;
+	font-weight:bold;
+	width: 3em;
+	border:none;
+	color:#29594d;
+}
+.charsheet button[type=action].luckBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 1px;
+	color:#000;
+	font-size:14px;
+	border-style:solid;
+	background-color:#ccc; 
+	border-color:#666;
+	width:1em;
+	height:20px;
+}
+.charsheet input[type=number].miscNum {
+	width:42px;
+	font-size: 14px;
+	font-weight:bold;
+	text-align:right;
+	border-style:solid;
+	border-width:1px;
+	color:#1f1f1f;
+}
+/* ###################### Modifiers ########################### */
+
+/* ###################### Talents ########################### */
+.sheet-talents{
+	grid-area: c;
+	border:2px solid black;
+	border-radius: 5px;
+	display:grid;
+	grid-template-columns: 6em 3em 3em 3em 3em;
+	grid-gap:5px;
+	padding: 5px;
+	align-items:center;
+	width:21em;
+}
+.sheet-talentNumb{
+	width:4em;
+	font-size:11px;
+	text-align:right;
+}
+/* ###################### Talents ########################### */
+/* ################### Damage/Health ######################## */
+.sheet-health {
+	border:2px solid black;
+	border-radius: 5px;
+	display:block;
+	padding: 5px;
+	align-items:center;
+	font-size:12px;
+	font-weight:bold;
+	grid-area: g;
+
+}
+/* ################### Damage/Health ######################## */
+
+/* #################### Encumbrance ######################### */
+.sheet-encumbrance {
+	width:9em;
+	border:2px solid black;
+	border-radius: 5px;
+	display:block;
+	padding: 5px;
+	align-items:center;
+	font-size:12px;
+	font-weight:bold;
+}
+/* #################### Encumbrance ######################### */
+
+/* ###################### Weapons ########################### */
+.sheet-weapons {
+	grid-area: h;
+	border:2px solid black;
+	border-radius: 5px;
+	display:block;
+	padding: 5px;
+	align-items:center;
+	font-size:12px;
+	font-weight:bold;
+}
+.sheet-weapon-grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	
+}
+.sheet-wpnTxt {
+	font-size:11px;
+	width:4em;
+}
+/* ###################### Weapons ########################### */
+
+/* ###################### Skills ############################ */
+.sheet-skills {
+	grid-area: i;
+	border:2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	font-size:11px;
+	font-weight:bold;
+	width:824px;
+	display: block;
+}
+.sheet-skills-container {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.sheet-mid-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 8px;
+}
+.sheet-sklTxt {
+	width:11.1em;
+	font-size:11px;
+	height:18px;
+}
+.sheet-sklNum {
+	width:3em;
+	text-align:center;
+	font-size:11px;
+	height:18px;
+}
+.charsheet button[type=action].sheet-sklBtn {
+	border-radius: 5px 5px 5px 5px;
+	border-width: 2px;
+	color:#b68013;
+	font-size:11px;
+	border-style: solid;
+	background-color: #8a0303;
+	border-color: #000;
+	border-radius:5px;
+	width:4em;
+	height:18px;
+	font-weight:bold;
+} 
+
+.charsheet button[type=action].sheet-sklBtn:hover {
+	background-color:#ac2525;
+	border-radius: 5px;
+	background-position: 0 -28px;
+}
+.repcontainer[data-groupname="repeating_skills"] {
+	flex: 0 1 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.repcontainer[data-groupname="repeating_skills"] .repitem {
+	flex: 0 0 auto;
+	color: black;
+	width: 272px;
+	border: 0px solid;
+	border-radius: 2px;
+	margin-top: 0px;
+}
+.sheet-sklConfig {
+	border: 1px solid #000;
+	border-radius:3px;
+	width:70%;
+}
+.sheet-skl:checked ~ *.sheet-sklConfig {
+	display:none;
+}
+
+.charsheet span.sheet-is-Hideskl::after { 
+	font-family: "pictos";
+	content: "[";
+}
+
+.charsheet .sheet-skl:checked + span.sheet-is-Hideskl::after { 
+	font-family: "pictos";
+	content: "}";
+}
+
+.charsheet span.sheet-is-Hideskl {
+    text-align: center;
+    display: inline-block;    
+    width:2em;
+    height: 16px;
+    font-size: 11px;
+	background-color:transparent;
+	color: #1f1f1f; 
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -18px;
+	padding:0px;
+}
+
+.charsheet input.sheet-skl {
+    width: 2em;
+    height: 16px;
+    cursor: pointer;
+    margin: -10px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-skl:checked + span.sheet-is-Hideskl {
+	background-color:transparent;
+    border-radius: 4px;
+	color: #1f1f1f;
+}
+.sheet-subSkill{
+	font-size:11px;
+	color: #1f1f1f;
+	width:167px;
+	text-align:right;
+}
+/* ###################### Skills ############################ */

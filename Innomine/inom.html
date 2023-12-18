@@ -1,0 +1,1291 @@
+				<div class="sheet-cdiv" style="text-align:right;"> <!-- sheet-cdiv -->
+                	<input name="attr_is_config" class="sheet-HideConfig" type="checkbox" checked="checked" title="options">
+                	<span class="sheet-is-config" >
+                		<span style='font-family:pictos;'>y</span>
+                	</span>
+                	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left">
+                        <div style="text-align:center;">
+                        	Character type: 
+                            <select name="attr_type">
+                                <option value="1">Angel</option>
+                                <option value="2">Demon</option>
+                                <option value="3">Human</option>
+                                <option value="4">Undead</option>
+                            </select>
+                        </div>
+
+    	            </div> <!-- sheet-config -->
+				</div> <!-- sheet-cdiv -->
+<input class="sheet-type sheet-type1" type="checkbox" name="attr_type" value="1">
+<input class="sheet-type sheet-type2" type="checkbox" name="attr_type" value="2">
+<input class="sheet-type sheet-type3" type="checkbox" name="attr_type" value="3">
+<input class="sheet-type sheet-type4" type="checkbox" name="attr_type" value="4">
+
+<div class="sheet-typeChar-Angel">
+	<div class="sheet-header">
+		<span class="sheet-logo1"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/Logo300y.png?raw=true"></span>
+	    <span class="sheet-title1">Name</span>
+        <span class="sheet-title3">Choir</span>
+        <span class="sheet-title5">Essence</span>
+    	<span class="sheet-title2">Archangel</span>
+        <span class="sheet-title4">Word</span>
+        <span class="sheet-input1"><input class=sheet-hdrTxt type=text name=attr_character_name /></span>
+        <span class="sheet-input2"><input class=sheet-hdrTxt type=text name=attr_angel list="archangles"/></span>
+        <span class="sheet-input3"><input class=sheet-hdrTxt type=text name=attr_choir list="choirs"/></span>
+        <span class="sheet-input4"><input class=sheet-hdrTxt type=text name=attr_word tabindex=-1/></span>
+        <span class="sheet-input5"><input class=sheet-essTxtNum type=text name=attr_essence />/<span class="sheet-essTxt" name="attr_essence_max"></span><input hidden type=text name=attr_essence_max/></span>
+    </div> <!-- Header -->
+</div>
+<div class="sheet-typeChar-Demon">
+	<div class="sheet-header">
+		<span class="sheet-logo1"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/Logo300y.png?raw=true"></span>
+	    <span class="sheet-title1">Name</span>
+        <span class="sheet-title3">Band</span>
+        <span class="sheet-title5">Essence</span>
+    	<span class="sheet-title2">Demon Prince</span>
+        <span class="sheet-title4">Word</span>
+        <span class="sheet-input1"><input class=sheet-hdrTxt type=text name=attr_character_name /></span>
+        <span class="sheet-input2"><input class=sheet-hdrTxt type=text name=attr_angel list="demonPrinces"/></span>
+        <span class="sheet-input3"><input class=sheet-hdrTxt type=text name=attr_choir list="bands"/></span>
+        <span class="sheet-input4"><input class=sheet-hdrTxt type=text name=attr_word tabindex=-1/></span>
+        <span class="sheet-input5"><input class=sheet-essTxtNum type=text name=attr_essence />/<span class="sheet-essTxt" name="attr_essence_max"></span><input hidden type=text name=attr_essence_max/></span>
+    </div> <!-- Header -->
+</div>
+<div class="sheet-typeChar-Human">
+	<div class="sheet-header" style="align-items:center;">
+		<span class="sheet-logo1"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/Logo300y.png?raw=true"></span>
+	    <span class="sheet-title1">Name</span>
+        <span class="sheet-title5">Essence</span>
+    	<span class="sheet-input2" style="text-align:left !important; align-items:center;">
+        	&ensp;&nbsp;Body:&nbsp;<span class="sheet-essTxt" name="attr_bodyHuman_max"></span><input hidden type=text name=attr_bodyHuman_max  />
+	        &ensp;Hits: <input style="width:3em;text-align:center;height:20px;" type=text name=attr_bodyHuman />
+        </span>
+        <span class="sheet-input1"><input class=sheet-hdrTxt type=text name=attr_character_name /></span>
+        <span class="sheet-input5"><input class=sheet-essTxtNum type=text name=attr_essence />/
+        <span class="sheet-essTxt" name="attr_essence_max"></span><input hidden type=text name=attr_essence_max/></span>
+    </div> <!-- Header -->
+</div>
+
+<div class="sheet-typeChar-Undead">
+	<div class="sheet-header">
+		<span class="sheet-logo1"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/Logo300y.png?raw=true"></span>
+	    <span class="sheet-title1">Name</span>
+        <span class="sheet-title5">Essence</span>
+    	<span class="sheet-title2">Demon Prince</span>
+        <span class="sheet-input1"><input class=sheet-hdrTxt type=text name=attr_character_name /></span>
+        <span class="sheet-input2"><input class=sheet-hdrTxt type=text name=attr_angel list="demonPrinces"/></span>
+        <span class="sheet-input5"><input class=sheet-essTxtNum type=text name=attr_essence />/<span class="sheet-essTxt" name="attr_essence_max"></span><input hidden type=text name=attr_essence_max/></span>
+    </div> <!-- Header -->
+</div>
+<!-- Forces -->
+    <div class="sheet-forces">
+        <div class="sheet-force-section">
+            <input hidden type="radio" value="0" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-0" checked>
+            <input hidden type="radio" value="1" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-1">
+            <input hidden type="radio" value="2" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-2">
+            <input hidden type="radio" value="3" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-3">
+            <input hidden type="radio" value="4" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-4">
+            <input hidden type="radio" value="5" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-5">
+            <input hidden type="radio" value="6" name="attr_corporeal" class="sheet-corporeal-checkbox sheet-corporeal-6">
+            <span class="sheet-forceImg"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/corporeal.png?raw=true" width=130px></span>
+
+            <div class="sheet-clock" >
+            	<div class="sheet-circle">
+                    <div class="sheet-secondary" >
+                        <div><input class="sheet-forceNum" type=text min=0 max=6 name="attr_corporeal" tabindex=-1></div>
+                        <div>
+                            <button type=action name=act_Strength class="charBtn" title="Strength roll">Strength</button><br>
+                            <input type=number min=0 max=12 name="attr_Strength" class="sheet-ovalnum">
+                        </div>
+                        <div>
+                            <button type=action name=act_Agility class="charBtn" title="Agility roll">Agility</button><br>
+                            <input type=number min=0 max=12 name="attr_Agility" class="sheet-ovalnum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sheet-force-section">
+            <input hidden type="radio" value="0" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-0" checked>
+            <input hidden type="radio" value="1" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-1">
+            <input hidden type="radio" value="2" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-2">
+            <input hidden type="radio" value="3" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-3">
+            <input hidden type="radio" value="4" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-4">
+            <input hidden type="radio" value="5" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-5">
+            <input hidden type="radio" value="6" name="attr_ethereal" class="sheet-ethereal-checkbox sheet-ethereal-6">
+            <span class="sheet-forceImg"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/ethereal.png?raw=true" width=130px></span>
+            <div class="sheet-clock">
+            	<div class="sheet-circle">
+                    <div class="sheet-secondary">
+                        <div><input class="sheet-forceNum" type=text min=0 max=6 name="attr_ethereal" tabindex=-1></div>
+                        <div>
+                            <button type=action name=act_Intelligence class="charBtn" title="Intelligence roll">Intelligence</button><br>
+                            <input type=number min=0 max=12 name="attr_Intelligence" class="sheet-ovalnum">
+                        </div>
+                        <div>
+                            <button type=action name=act_Precision class="charBtn" title="Precision roll">Precision</button><br>
+                            <input type=number min=0 max=12 name="attr_Precision" class="sheet-ovalnum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            	Mind:<span class="sheet-essTxt" name="attr_mind_max"></span><span>&emsp;Hits:<input style="width:3em;text-align:center;height:20px;" type=text name=attr_mind /><input hidden type=text name=attr_mind_max/></span>
+            </div>
+        </div>
+    
+        <div class="sheet-force-section">
+            <input hidden type="radio" value="0" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-0" checked>
+            <input hidden type="radio" value="1" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-1">
+            <input hidden type="radio" value="2" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-2">
+            <input hidden type="radio" value="3" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-3">
+            <input hidden type="radio" value="4" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-4">
+            <input hidden type="radio" value="5" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-5">
+            <input hidden type="radio" value="6" name="attr_celestial" class="sheet-celestial-checkbox sheet-celestial-6">
+            <span class="sheet-forceImg"><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/celestial.png?raw=true" width=130px></span>
+            <div class="sheet-clock">
+                <div class="sheet-circle">
+                    <div class="sheet-secondary">
+                        <div><input class="sheet-forceNum" type=text min=0 max=6 name="attr_celestial" tabindex=-1></div>
+                        <div>
+                            <button type=action name=act_Will class="charBtn" title="Will roll">Will</button><br>
+                            <input type=number min=0 max=6 name="attr_Will" class="sheet-ovalnum">
+                        </div>
+                        <div>
+                            <button type=action name=act_Perception class="charBtn" title="Perception roll">Perception</button><br>
+                            <input type=number min=0 max=6 name="attr_Perception" class="sheet-ovalnum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            	Soul:<span class="sheet-essTxt" name="attr_soul_max"></span><span>&emsp;Hits:<input style="width:3em;text-align:center;height:20px;" type=text name=attr_soul /><input hidden type=text name=attr_soul_max/></span>
+			</div>
+        </div>
+        
+        <div class="sheet-force-section">
+            <h3>Global Modifiers</h3>
+            <div class="sheet-modifiers">
+                <div>
+                    Difficulty:
+                    <select name=attr_globalDifficulty style="width:8em; height:24px; font-size:12px;padding-top:2px;margin-bottom:2px;border-color:#000;" title="Difficulty">
+                        <option value="-2">Very Tough</option>
+                        <option value="-1">Tough</option>
+                        <option value="0" selected>Average</option>
+                        <option value="1">Easy</option>
+                        <option value="2">Very Easy</option>
+                    </select><br />
+                    Risky:&emsp;&ensp;<input type=checkbox name=attr_globalRisky value=1 title="Risky" />
+                </div>
+                <div>
+                	Gerneric Roll:<input type=text name=attr_genericRoll style="width:5em;" />
+                    <button type=roll value="@{character_name} rolls @{genericRoll} = [[@{genericRoll}]]"></button>
+                </div>
+                
+            </div>
+        </div>
+                
+        </div> <!-- forces -->
+</div>
+
+<div class="sheet-typeChar-Angel">
+  <div><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/resources.png?raw=true" width=25%></div>
+    <div style="color: #981f22; font-variant: small-caps;">Resources</div>
+	<div class="sheet-resources">
+        <div class=sheet-vessels>
+            <h4>Vessels</h4>
+      </div>        
+        <div class=sheet-songs>
+            <h4>Songs</h4>
+        </div>        
+        <div class=sheet-skills>
+            <h4>Skills</h4>
+        </div>        
+        <div class=sheet-servants>
+            <h4>Servants</h4>
+        </div>        
+        <div class=sheet-roles>
+            <h4>Roles</h4>
+        </div>        
+        <div class=sheet-artifacts>
+            <h4>Artifacts</h4>
+        </div>        
+        <div class=sheet-mundane>
+            <h4>Mundane Items</h4>
+        </div>        
+  </div>
+</div>
+<div class="sheet-typeChar-Demon">
+	<h4>Other Demon Stuff</h4>
+    <div><img src="https://github.com/Martin-Eth/R20/blob/main/Innomine/resources.png?raw=true" width=25%></div>
+	<div class="sheet-resources">
+        <div class=sheet-vessels>
+            <h4>Vessels</h4>
+        </div>        
+        <div class=sheet-songs>
+            <h4>Songs</h4>
+        </div>        
+        <div class=sheet-skills>
+            <h4>Skills</h4>
+        </div>        
+        <div class=sheet-servants>
+            <h4>Servants</h4>
+        </div>        
+        <div class=sheet-roles>
+            <h4>Roles</h4>
+        </div>        
+        <div class=sheet-artifacts>
+            <h4>Artifacts</h4>
+        </div>        
+        <div class=sheet-mundane>
+            <h4>Mundane Items</h4>
+        </div>        
+	</div></div>
+<div class="sheet-typeChar-Human">
+	<h4>Other Human Stuff</h4>
+</div>
+<div class="sheet-typeChar-Undead">
+	<h4>Other Undead Stuff</h4>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-d666">
+    <div class="sheet-container">
+        <div class="sheet-hdr">{{name}}</div>
+        <div class="sheet-hdrb">{{message}} roll</div>
+        <div class="sheet-content">
+            {{#rollTotal() roll1 1}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">A</span></div>
+                        <div class="sheet-Angelic">Holy Spirit Intervenes</div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">A F <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 1}}
+            {{#rollTotal() roll1 2}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">B F <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 2}}
+            {{#rollTotal() roll1 3}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">C F <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 3}}
+            {{#rollTotal() roll1 4}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">D F <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 4}}
+            {{#rollTotal() roll1 5}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">E F <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 5}}
+            {{#rollTotal() roll1 6}}
+                {{#rollTotal() roll2 1}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F A <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 1}}
+                {{#rollTotal() roll2 2}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F B <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 2}}
+                {{#rollTotal() roll2 3}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F C <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 3}}
+                {{#rollTotal() roll2 4}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F D <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 4}}
+                {{#rollTotal() roll2 5}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F E <span class="sheet-diceCd">F</span></div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 5}}
+                {{#rollTotal() roll2 6}}
+                    {{#rollTotal() roll3 1}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">A</span></div>
+                    {{/rollTotal() roll3 1}}
+                    {{#rollTotal() roll3 2}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">B</span></div>
+                    {{/rollTotal() roll3 2}}
+                    {{#rollTotal() roll3 3}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">C</span></div>
+                    {{/rollTotal() roll3 3}}
+                    {{#rollTotal() roll3 4}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">D</span></div>
+                    {{/rollTotal() roll3 4}}
+                    {{#rollTotal() roll3 5}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">E</span></div>
+                    {{/rollTotal() roll3 5}}
+                    {{#rollTotal() roll3 6}}
+                        <div><span class="sheet-dicer">F F <span class="sheet-diceCd">F</span></div>
+                        <div class="sheet-demonic">Infernal Intervention</div>
+                    {{/rollTotal() roll3 6}}
+                {{/rollTotal() roll2 6}}
+            {{/rollTotal() roll1 6}}
+
+            <div>{{res}} vs {{tv}}</div>
+            {{#rollGreater() res tv}}
+            	<div class="sheet-failure">Failure!</div>
+            {{/rollGreater() res tv}}
+            {{#^rollGreater() res tv}}
+            	<div class="sheet-success">Success!</div>
+            {{/^rollGreater() res tv}}
+            
+            <div>Check Digit:{{cd}}</div>
+            
+        </div>
+    </div>
+</rolltemplate>
+
+<script type="text/worker">
+
+	['corporeal', 'ethereal', 'celestial', 'will', 'intelligence', 'strength'].forEach(attr => {
+		on(`change:${attr}`, (info) => { 
+			getAttrs(['corporeal', 'ethereal', 'celestial', 'will', 'intelligence', 'strength'], function(v) {
+				let cor = (parseInt(v.corporeal)||0);
+				let eth = (parseInt(v.ethereal)||0);
+				let cel = (parseInt(v.celestial)||0);
+				let wil = (parseInt(v.will)||0);
+				let intl = (parseInt(v.intelligence)||0);
+				let strn = (parseInt(v.strength)||0);
+				setAttrs({
+					essence_max: cor + eth + cel,
+					soul_max: cel * wil,
+					mind_max: eth * intl,
+					bodyHuman_max: cor * 2 * strn
+				});
+			});
+		});	
+	});
+	
+	on('change:angel', (info) => { 
+		getAttrs(['angel'], function(v) {
+			let ang = v.angel||"";
+			let wrd = "";		
+			switch (ang) {
+				case 'Blandine':
+					wrd = "Dreams"
+				break;
+				case 'David':
+					wrd = "Stone"
+				break;
+				case 'Dominic':
+					wrd = "Judgment"
+				break;
+				case 'Eli':
+					wrd = "Creation"
+				break;
+				case 'Gabriel':
+					wrd = "Fire"
+				break;
+				case 'Janus':
+					wrd = "Wind"
+				break;
+				case 'Jean':
+					wrd = "Lightning"
+				break;
+				case 'Jordi':
+					wrd = "Animals"
+				break;
+				case 'Laurence':
+					wrd = "Sword"
+				break;
+				case 'Marc':
+					wrd = "Trade"
+				break;
+				case 'Michael':
+					wrd = "War"
+				break;
+				case 'Novalis':
+					wrd = "Flowers"
+				break;
+				case 'Yves':
+					wrd = "Destiny"
+				break;
+				default:
+					wrd="";
+			};
+			setAttrs({
+				word: wrd
+			});
+		});
+	});	
+
+	['Strength', 'Agility', 'Intelligence', 'Precision', 'Will', 'Perception' ].forEach(attr => {
+		on(`clicked:${attr}`, function() { 
+			getAttrs([`${attr}`, 'globalRisky', 'globalDifficulty'], function(v) {
+				let tv = parseInt(v[`${attr}`])||0;
+				let rn = `${attr}`;
+				let rv = parseInt(v.globalRisky)||0;
+				let dv = parseInt(v.globalDifficulty)||0;
+				let cd = rv;
+				tv += dv - rv;
+				if (tv>12) {
+					cd += tv - 12;
+					tv = 12;
+				};
+		let macro="&{template:d666} {{name=@{character_name}}} {{message=" + rn + "}} [[ [[1d6]] + [[1d6]] ]] [[ [[1d6]]+" + cd + "]] {{roll1=$[[0]]}}"
+		macro += "{{roll2=$[[1]]}} {{roll3=$[[3]]}} {{res=$[[2]]}} {{tv=[[" + tv + "[" + rn + "]]]}} {{cd=$[[5]]}}";
+		startRoll(macro, (results) => {
+            const total = results.results.roll1.result
+            const computed = total % 4;
+            finishRoll(
+                results.rollId,
+                {
+                    roll1: computed
+                });
+		});
+
+			});
+		});	
+	});
+	
+</script>
+<datalist id="choirs">
+    <option value="Seraphim">The Most Holy</option>
+    <option value="Cherubim">The Guardians</option>
+    <option value="Ofanim">The Wheels</option>
+    <option value="Elohim">The Powers</option>
+    <option value="Malakim">The Virtues</option>
+    <option value="Kyriotates">The Dominations</option>
+    <option value="Mercurians">Friends of Man</option>
+    <option value="The Grigori">The Watchers</option>
+</datalist>
+<datalist id="archangles">
+    <option value="Blandine">Archangel of Dreams</option>
+    <option value="David">Archangel of Stone</option>
+    <option value="Dominic">Archangel of Judgment</option>
+    <option value="Eli">Archangel of Creation</option>
+    <option value="Gabriel">Archangel of Fire</option>
+    <option value="Janus">Archangel of the Wind</option>
+    <option value="Jean">Archangel of Lightning</option>
+    <option value="Jordi">Archangel of Animals</option>
+    <option value="Laurence">Archangel of the Sword</option>
+    <option value="Marc">Archangel of Trade</option>
+    <option value="Michael">Archangel of War</option>
+    <option value="Novalis">Archangel of Flowers</option>
+    <option value="Yves">Archangel of Destiny</option>
+</datalist>
+<datalist id="bands">
+    <option value="Balseraph">The Liars</option>
+    <option value="Djinn">The Stalkers</option>
+    <option value="Calabim">The Destroyers</option>
+    <option value="Habbalah">The Punishers</option>
+    <option value="Lilim">The Tempters</option>
+    <option value="Shedim">The Corruptors</option>
+    <option value="Impudites">The Talkers</option>
+</datalist>
+<datalist id="demonPrinces">
+    <option value="Andrealphus">Prince of Lust</option>
+    <option value="Asmodeus">Prince of the Game</option>
+    <option value="Baal">Prince of War</option>
+    <option value="Beleth">Princess of Nightmares</option>
+    <option value="Belial">Prince of Fire</option>
+    <option value="Haagenti">Prince of Gluttony</option>
+    <option value="Kobal">Prince of Dark Humor</option>
+    <option value="Kronos">Prince of Fate</option>
+    <option value="Malphas">Prince of Factions</option>
+    <option value="Nybbas">Prince of the Media</option>
+    <option value="Saminga">Prince of Death</option>
+    <option value="Valefor">Prince of Theft</option>
+    <option value="Vapula">Prince of Technology</option>
+</datalist>
+<datalist id="roles">
+    <option value="Archeologist"></option>
+    <option value="Bartender"></option>
+    <option value="Doctor"></option>
+    <option value="Entertainer"></option>
+    <option value="Hacker"></option>
+    <option value="Hunter"></option>
+    <option value="Journalist"></option>
+    <option value="Lawyer"></option>
+    <option value="Police Officer"></option>
+    <option value="Politition"></option>
+    <option value="Private Detective"></option>
+    <option value="Religious Figure"></option>
+    <option value="Scientist"></option>
+    <option value="Sports Hero"></option>
+</datalist>
+<datalist id="skills">
+    <option value="Acrobatics">Agility</option>
+    <option value="Artistry">Perscption</option>
+    <option value="Chemistry">Intelligence</option>
+    <option value="Climbing">Agility</option>
+    <option value="Computer Operation">Intelligence</option>
+    <option value="Detect Lies">Perception</option>
+    <option value="Dodge">Agility/Precision/Perception</option>
+    <option value="Driving">Precision</option>
+    <option value="Electronics">higher of Intelligence or Precision</option>
+    <option value="Emote">Perception</option>
+    <option value="Engineering">Precision</option>
+    <option value="Escaper">higher of Agility or Precision</option>
+    <option value="Fast-Talk">Will</option>
+    <option value="Fighting">Strength/Intelligence/Will</option>
+    <option value="Knowledge (specialise)">Intelligence</option>
+    <option value="Language (specialise">Intelligence</option>
+    <option value="Large Weapon">Strength</option>
+    <option value="Lockpicking">Precision</option>
+    <option value="Lying">higher of Intelligence or Perception</option>
+    <option value="Medicine">Precision</option>
+    <option value="Move Silently">Agility</option>
+    <option value="Ranged Weapon">Precision</option>
+    <option value="Running">higher of Strength or Agility</option>
+    <option value="Savoir-Faire">Higher of Intelligence or Precision</option>
+    <option value="Seduction">Will</option>
+    <option value="Singing">Perception</option>
+    <option value="Small Weapon">Precision</option>
+    <option value="Survival">higher of Will or Perception</option>
+    <option value="Swimming">Agility</option>
+    <option value="Tactics">Intelligence</option>
+    <option value="Throwing">higher of Agility or Precision</option>
+    <option value="Tracking">Percetion</option>
+</datalist>
+<datalist id="songs">
+    <option value="Attraction"></option>
+    <option value="Charm"></option>
+    <option value="Dreams"></option>
+    <option value="Entropy"></option>
+    <option value="Form"></option>
+    <option value="Harmony"></option>
+    <option value="Healing"></option>
+    <option value="Light"></option>
+    <option value="Motion"></option>
+    <option value="Numinous Corpus (specify)">Corporeal only</option>
+    <option value="Possesion">Celestial only</option>
+    <option value="Projection"></option>
+    <option value="Shields"></option>
+    <option value="Thunder"></option>
+    <option value="Tongues"></option>
+</datalist>    
+<datalist id="songs">
+    <option value="Attraction"></option>
+    <option value="Charm"></option>
+    <option value="Dreams"></option>
+    <option value="Entropy"></option>
+    <option value="Form"></option>
+    <option value="Harmony"></option>
+    <option value="Healing"></option>
+    <option value="Light"></option>
+    <option value="Motion"></option>
+    <option value="Numinous Corpus (specify)">Corporeal only</option>
+    <option value="Possesion">Celestial only</option>
+    <option value="Projection"></option>
+    <option value="Shields"></option>
+    <option value="Thunder"></option>
+    <option value="Tongues"></option>
+</datalist>    
+<datalist id="songs">
+    <option value="Attraction"></option>
+    <option value="Charm"></option>
+    <option value="Dreams"></option>
+    <option value="Entropy"></option>
+    <option value="Form"></option>
+    <option value="Harmony"></option>
+    <option value="Healing"></option>
+    <option value="Light"></option>
+    <option value="Motion"></option>
+    <option value="Numinous Corpus (specify)">Corporeal only</option>
+    <option value="Possesion">Celestial only</option>
+    <option value="Projection"></option>
+    <option value="Shields"></option>
+    <option value="Thunder"></option>
+    <option value="Tongues"></option>
+</datalist>    
+<datalist id="discord">
+    <option value="Damage Sense">Corporeal</option>
+    <option value="Crippled">Corporeal</option>
+    <option value="Discoloured">Corporeal</option>
+    <option value="Obese">Corporeal</option>
+    <option value="Pallid">Corporeal</option>
+    <option value="Stigmata">Corporeal</option>
+    <option value="Twitchy">Corporeal</option>
+    <option value="Ugly">Corporeal</option>
+    <option value="Vestigium">Corporeal</option>
+    <option value="Vulnerable">Corporeal</option>
+    <option value="Shields">Corporeal</option>
+    <option value="Thunder">Corporeal</option>
+    <option value="Tongues">Corporeal</option>
+    <option value="Angry">Ethereal</option>
+    <option value="Aura">Ethereal</option>
+    <option value="Berserk">Ethereal</option>
+    <option value="Bound">Ethereal</option>
+    <option value="Cowardly">Ethereal</option>
+    <option value="Fear">Ethereal</option>
+    <option value="Geas">Ethereal</option>
+    <option value="Paranoia">Ethereal</option>
+    <option value="Celestial Blindness">Celestial</option>
+    <option value="Gluttonous">Celestial</option>
+    <option value="Greedy">Celestial</option>
+    <option value="Lustful">Celestial</option>
+    <option value="Angry">Celestial</option>
+    <option value="Merciful">Celestial</option>
+    <option value="Murderous">Celestial</option>
+    <option value="Need">Celestial</option>
+    <option value="Slothful">Celestial</option>
+</datalist> 

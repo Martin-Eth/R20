@@ -1,0 +1,407 @@
+
+.charsheet{
+	background-color:#e8e8e8;
+	
+	width:840px;
+}
+/* sheet header info */
+.sheet-header {
+	display: grid;
+	grid-template-areas:
+		'a b c d e f' 
+		'a g h i j k';
+	grid-gap: 5px;
+	grid-template-columns: 250px 8em 14em 5em 9em auto;
+	grid-template-rows:  auto auto;
+	align-items:center;
+}
+
+.charsheet .sheet-logo1{
+	grid-area: a;
+	display:block;
+}
+.sheet-forceImg {
+	padding-bottom:5px;
+}
+.sheet-title1{
+	grid-area: b;
+	display:block;
+	text-align: right;
+}
+.sheet-title2{
+	grid-area: g;
+	display:block;
+	text-align: right;
+}
+.sheet-title3{
+	grid-area: d;
+	display:block;
+	text-align: right;
+}
+.sheet-title4{
+	grid-area: i;
+	display:block;
+	text-align: right;
+}
+.sheet-title5{
+	grid-area: f;
+	display:block;
+	text-align: center;
+}
+.sheet-input1{
+	grid-area: c;
+	display:block;
+	text-align: right;
+}
+.sheet-input2{
+	grid-area: h;
+	display:block;
+	text-align: right;
+}
+.sheet-input3{
+	grid-area: e;
+	display:block;
+	text-align: right;
+}
+.sheet-input4{
+	grid-area: j;
+	display:block;
+	text-align: right;
+}
+.sheet-input5{
+	grid-area: k;
+	display:block;
+	text-align: center;
+	align-items: center;
+	font-size:18px;
+
+}
+.sheet-hdrTxt{
+	width:95%;
+}
+
+span.sheet-essTxt {
+	font-weight:bold;
+	pointer-events:none;
+}
+.sheet-essTxtNum {
+	font-weight:bold;
+	width:2em;
+	text-align:center;
+	font-size:18px;
+}
+
+/* sheet clocks */
+.sheet-clock {
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid black;
+}
+.sheet-celestial-checkbox.sheet-celestial-0:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-0:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-0:checked ~ .sheet-clock {
+    background: white;
+}
+.sheet-celestial-checkbox.sheet-celestial-1:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-1:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-1:checked ~ .sheet-clock {
+    background-image: linear-gradient(90deg, transparent 50%, white 50%),
+                      linear-gradient(30deg, white 50%, green 50%);
+}
+.sheet-celestial-checkbox.sheet-celestial-2:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-2:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-2:checked ~ .sheet-clock {
+    background-image: linear-gradient(90deg, transparent 50%, white 50%),
+                      linear-gradient(330deg, white 50%, green 50%);
+}
+
+.sheet-celestial-checkbox.sheet-celestial-3:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-3:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-3:checked ~ .sheet-clock {
+    background-image: linear-gradient(90deg, transparent 50%, white 50%),
+                      linear-gradient(270deg, white 50%, green 50%);
+}
+.sheet-celestial-checkbox.sheet-celestial-4:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-4:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-4:checked ~ .sheet-clock {
+    background-image: linear-gradient(270deg, transparent 50%, green 50%),
+                      linear-gradient(210deg, white 50%, green 50%);
+}
+.sheet-celestial-checkbox.sheet-celestial-5:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-5:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-5:checked ~ .sheet-clock {
+    background-image: linear-gradient(270deg, transparent 50%, green 50%),
+                      linear-gradient(150deg, white 50%, green 50%);
+}
+.sheet-celestial-checkbox.sheet-celestial-6:checked ~ .sheet-clock,
+.sheet-ethereal-checkbox.sheet-ethereal-6:checked ~ .sheet-clock,
+.sheet-corporeal-checkbox.sheet-corporeal-6:checked ~ .sheet-clock {
+    background-color: green;
+}
+
+.sheet-circle {
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #e8e8e8;
+    border: 2px solid black;
+	padding-top: 1px;
+	margin-top:8px;
+	line-height: 80%;
+}
+
+
+
+
+.sheet-force-section {
+    display: block;
+    text-align: center;
+	border: 2px ridge grey;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.sheet-forceNum{
+	font-size:18px;
+	font-weight:bold;
+	width: 30px;
+	height: 30px;
+	text-align:center;
+	border-radius: 50%;
+	background-color:#CC9933;
+	border:1px solid #cc9933;
+	color: #000;
+}
+.charsheet input[type=number].sheet-ovalnum {
+	font-size: 14px;
+	height: 16px;
+	width: 3em;
+	border: 1px solid black;
+	border-radius: 10px;
+	text-align:right;
+	padding-bottom: -5px;
+	margin:0px;
+}
+
+
+.sheet-forces{
+	display:grid;
+	background-color:transparent;
+	grid-template-columns: 25% 25% 25% auto;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.sheet-secondary{
+	display:block;
+	background-color:transparent;
+	padding-top:8px;
+}
+.sheet-modifiers{
+	display:block;
+	text-align:left;
+	padding:5px;
+	align-items:center;
+}
+.charsheet button[type=action].charBtn {
+	border:none;
+	color:#006;
+	font-size:11px;
+	background-color:transparent; 
+	margin-bottom: -5px;
+}
+.charsheet button[type=action].charBtn:hover {
+	color:#660000;
+	background-position: 0 -28px;
+}
+/* d666 rollTemplate */
+.sheet-rolltemplate-d666 .inlinerollresult,
+.sheet-rolltemplate-d666 .inlinerollresult.fullcrit,
+.sheet-rolltemplate-d666 .inlinerollresult.fullfail,
+.sheet-rolltemplate-d666 .inlinerollresult.importantroll {
+	display: inline-block;
+	min-width: 1.1em;
+	text-align: center;
+	border: none;
+	background-color:transparent;
+}
+.sheet-rolltemplate-d666 .sheet-container {
+	color:#000;
+	border: 2px solid black;
+	width: 19em;
+	border-radius: .5em;
+	line-height:1.2em;
+	background-color: #ccc;
+}
+.sheet-rolltemplate-d666 .sheet-content {
+	text-align:center;
+}
+.sheet-rolltemplate-d666 .sheet-hdr {
+	font-weight: bold;
+	font-size: 20px;
+	color: #006600;
+	font-weight: bold;
+	padding: 5px;
+}
+.sheet-rolltemplate-d666 .sheet-hdrb {
+	font-size:16px;
+	color:#000;
+	font-weight: bold;
+	text-align:center;
+	padding-bottom: 10px;
+}
+.sheet-rolltemplate-d666 span.sheet-diceCd {
+	font-family: dicefontd6;
+	font-size:40px;
+	color:#6A0000;
+}
+.sheet-rolltemplate-d666 span.sheet-dicer {
+	font-family: dicefontd6;
+	font-size:40px;
+	color:#0000A0;
+}
+.sheet-rolltemplate-d666 .sheet-demonic {
+	font-size: 24px;
+	Font-weight: bold;
+	line-height: 2em;
+	color: #000;
+	background-color: #C91D21;
+	text-align: center;
+}
+.sheet-rolltemplate-d666 .sheet-Angelic {
+	font-size: 24px;
+	Font-weight: bold;
+	line-height: 2em;
+	color: #000;
+	background-color: #00a2e0;
+	text-align: center;
+}
+.sheet-rolltemplate-d666 .sheet-failure {
+	font-size: 14px;
+	Font-weight: bold;
+	color: #F00;
+	text-align: center;
+}
+.sheet-rolltemplate-d666 .sheet-success {
+	font-size: 14px;
+	Font-weight: bold;
+	color: #090;
+	text-align: center;
+}
+/* sheet control*/
+.sheet-cdiv {
+	margin-top:-12px;
+}
+.sheet-HideConfig:checked ~ *.sheet-config {
+	display:none;
+}
+
+.charsheet span.sheet-is-config::after { 
+	content: "^";
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config::after { 
+	content: "v";
+}
+
+.charsheet span.sheet-is-config {
+    text-align: center;
+    display: inline-block;    
+    width: 5%;
+    height: 16px;
+    font-size: 9px;
+    background: black; 
+	color: white;
+	font-weight: bold;
+	border-radius: 4px;
+	margin-left: -5%;
+}
+
+.charsheet input.sheet-HideConfig {
+     width: 5%;
+    height: 16px;
+    cursor: pointer;	
+    margin-left: auto;
+    margin-top: auto;
+	opacity: 0;
+	z-index: 9999;
+}
+
+.charsheet .sheet-HideConfig:checked + span.sheet-is-config {
+    background: black;
+    border-radius: 4px;
+	color: white;
+}
+.charsheet div[class^="sheet-typeChar"] {
+  display: none;
+}
+
+
+.charsheet input.sheet-type1:checked ~ div.sheet-typeChar-Angel,
+.charsheet input.sheet-type2:checked ~ div.sheet-typeChar-Demon,
+.charsheet input.sheet-type3:checked ~ div.sheet-typeChar-Human,
+.charsheet input.sheet-type4:checked ~ div.sheet-typeChar-Undead {
+  display: block;
+}
+.charsheet input.sheet-type {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  display: none;
+}
+
+.sheet-resources {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-areas:
+		'a b' 
+		'c d' 
+		'e f' 
+		'g h';
+	grid-template-columns: 49% auto;
+	grid-template-rows: auto auto auto auto;
+}
+.sheet-vessels {
+	display:block;
+	grid-area: a;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-roles {
+	display:block;
+	grid-area: b;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-songs {
+	display:block;
+	grid-area: c;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-skills {
+	display:block;
+	grid-area: d;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-artifacts {
+	display:block;
+	grid-area: e;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-servants {
+	display:block;
+	grid-area: f;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}
+.sheet-mundane {
+	display:block;
+	grid-area: g;
+	padding:5px;
+	border: 1px solid #aaaaaa;
+}

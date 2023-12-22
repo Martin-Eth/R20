@@ -1,26 +1,26 @@
-	<!--################### Configuration / Options ########################-->
+    <!--################### Configuration / Options ########################-->
 
-	<div class="sheet-cdiv" style="text-align:right;">
-		<input name="attr_is_config" class="sheet-HideConfig" type="checkbox" checked="checked" >
-		<span class="sheet-is-config" >
-			<span style='font-family:pictos;'>y</span>
-		</span>
-		<div class="sheet-config"> <!-- sheet-config -->
-			<input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox" checked="checked">Full Player Character Sheet
-			<input name="attr_toggleCharGenSheet" class="sheet-toggleCharGenSheet" type="checkbox" >Character Generator
-			<input name="attr_toggleNPCSheet" class="sheet-toggleNPCSheet" type="checkbox">NPC Sheet<br />
-			<div class="mylabel">
-				<input class=wisp type="checkbox" id="coding" name="attr_rollType_max" value="1" title="Whisper all rolls to GM when selected">
-				<div class="slidinggroove"></div>
-				<label class="mylabel" for="coding" name="skills" title="Whisper all rolls to GM when selected"><p class="labelterm" style="width:7em;">Whisper Rolls</p></label>
-			</div>            
-		</div>
-	</div>
+    <div class="sheet-cdiv" style="text-align:right;">
+        <input name="attr_is_config" class="sheet-HideConfig" type="checkbox" checked="checked" >
+        <span class="sheet-is-config" >
+            <span style='font-family:pictos;'>y</span>
+        </span>
+        <div class="sheet-config"> <!-- sheet-config -->
+            <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox" checked="checked">Full Player Character Sheet
+            <input name="attr_toggleCharGenSheet" class="sheet-toggleCharGenSheet" type="checkbox" >Character Generator
+            <input name="attr_toggleNPCSheet" class="sheet-toggleNPCSheet" type="checkbox">NPC Sheet<br />
+            <div class="mylabel">
+                <input class=wisp type="checkbox" id="coding" name="attr_rollType_max" value="1" title="Whisper all rolls to GM when selected">
+                <div class="slidinggroove"></div>
+                <label class="mylabel" for="coding" name="skills" title="Whisper all rolls to GM when selected"><p class="labelterm" style="width:7em;">Whisper Rolls</p></label>
+            </div>            
+        </div>
+    </div>
     
-	<!--###################- Start of Main Sheet -########################-->
+    <!--###################- Start of Main Sheet -########################-->
 
-	<input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" style="display: none;" type="checkbox" checked="checked">
-	<div class="sheet-FullSheet">
+    <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" style="display: none;" type="checkbox" checked="checked">
+    <div class="sheet-FullSheet">
         <div class="sheet-FullSheet-Grid"> 
             <div class="sheet-Info">
                 <span>Character Name:</span>
@@ -37,7 +37,7 @@
                 <span></span>
                 <span>Current Career:</span>
                 <span><input type=text class="sheet-infoText" name="attr_carer"  /></span>
-                <span>Sex:</span><span><input type=text class="sheet-textAsNum" name="attr_age" /></span>
+                <span>Gender:</span><span><input type=text class="sheet-textAsNum" name="attr_age" /></span>
                 <span>Looks:</span><span style="grid-column: 6 / span 3;"><input type=text class="sheet-infoText" name="attr_age" style=" width:23em;"/></span>
                 
           </div>
@@ -45,7 +45,7 @@
                 <h3 style="grid-column: 1 / span 7;">Attributes</h3>
                 <span class="sheet-hdr">Attribute</span><span class="sheet-hdr">Perm</span><span class="sheet-hdr">Cur</span>
                 <span class="sheet-hdr">AST</span><span class="sheet-hdr">CST</span><span class="sheet-hdr">Grp</span><span class="sheet-hdr">Effect Die</span>
-                <span class="sheet-hdr">Wit</span>
+                <span class="sheet-chdr">Wit</span>
                     <span><input type=text class="sheet-attribText" name="attr_wit_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_wit" value="10" /></span>
                     <span> <!-- Wit AST -->
@@ -61,7 +61,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_witGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_witEffectDie"><span name="attr_witGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr">Will</span>
+                <span class="sheet-chdr">Will</span>
                     <span><input type=text class="sheet-attribText" name="attr_wil_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_wil" value="10" /></span>
                     <span> <!-- Wit AST -->
@@ -77,7 +77,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_wilGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_wilEffectDie"><span name="attr_wilGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr">Strength</span>
+                <span class="sheet-chdr">Strength</span>
                     <span><input type=text class="sheet-attribText" name="attr_str_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_str" value="10" /></span>
                     <span> 
@@ -93,7 +93,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_strGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_strEffectDie"><span name="attr_strGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr">Deftness</span>
+                <span class="sheet-chdr">Deftness</span>
                     <span><input type=text class="sheet-attribText" name="attr_dft_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_dft" value="10" /></span>
                     <span> <!-- Wit AST -->
@@ -109,7 +109,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_dftGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_dftEffectDie"><span name="attr_dftGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr">Speed</span>
+                <span class="sheet-chdr">Speed</span>
                     <span><input type=text class="sheet-attribText" name="attr_spd_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_spd" value="10" /></span>
                     <span> <!-- Wit AST -->
@@ -125,7 +125,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_spdGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_spdEffectDie"><span name="attr_spdGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr">Health</span>
+                <span class="sheet-chdr">Health</span>
                     <span><input type=text class="sheet-attribText" name="attr_hlh_max" value="10" /></span>
                     <span><input type=text class="sheet-attribText" name="attr_hlh" value="10" /></span>
                     <span> <!-- Wit AST -->
@@ -141,7 +141,7 @@
                         <input type=text class="sheet-attribText" hidden name="attr_hlhGrp_max"  value="1D6" />
                         <button type=action class="effectDie" name="act_hlhEffectDie"><span name="attr_hlhGrp_max"></span></button>
                     </span>
-                <span class="sheet-hdr" style="grid-column: 1 / span 3;">Off-Hand Dexterity</span>
+                <span class="sheet-chdr" style="grid-column: 1 / span 3;">Off-Hand Dexterity</span>
                     <span><input type=text class="sheet-attribText" name="attr_ohd_max" title="Base Off-Hand Dexterity" readonly/></span>
                     <span><input type=text class="sheet-attribText" name="attr_ohd" title="Current Off-Hand Dexterity"/></span>
  
@@ -250,20 +250,20 @@
         </div>
         <div class="sheet-FullSheetb-Grid" style="margin-top:-5px";>
             <div class="sheet-health">
-            	<div>Damage Resistance Total:&nbsp;
-        	        <span name="attr_DRT" style="font-size:15px;"></span> / <span name="attr_DRT_max" style="font-size:15px;"></span>
-    	            <input hidden type=number name="attr_DRT" /></span>
-	                <input hidden type=number name="attr_DRT_max" />
+                <div>Damage Resistance Total:&nbsp;
+                    <span name="attr_DRT" style="font-size:15px;"></span> / <span name="attr_DRT_max" style="font-size:15px;"></span>
+                    <input hidden type=number name="attr_DRT" /></span>
+                    <input hidden type=number name="attr_DRT_max" />
               </div>
-    	            <div>Lethal:&nbsp;<input  class="sheet-healthNum" type=number name="attr_lethalDamage" />
-        	        &emsp;&emsp;&emsp;&emsp;&emsp;Subdual:&nbsp;<input  class="sheet-healthNum" type=number name="attr_subdualDamage" /></div>
-            	    <div>Critical:&nbsp;</div>
+                    <div>Lethal:&nbsp;<input  class="sheet-healthNum" type=number name="attr_lethalDamage" />
+                    &emsp;&emsp;&emsp;&emsp;&emsp;Subdual:&nbsp;<input  class="sheet-healthNum" type=number name="attr_subdualDamage" /></div>
+                    <div>Critical:&nbsp;</div>
                         <fieldset class="repeating_critDamage">
                             <input type=text class="sheet-damage" name="attr_description" placeholder="location/description">
                         </fieldset>
           </div>
             <div class="sheet-encumbrance">
-            	<div title="Base Encumbrance Capacity" style="text-align:center;">Enc Cap:&nbsp;<span class="sheet-dispText" name="attr_encCap"></span>kg
+                <div title="Base Encumbrance Capacity" style="text-align:center;">Enc Cap:&nbsp;<span class="sheet-dispText" name="attr_encCap"></span>kg
                 <input type=text hidden class="sheet-attribText" name="attr_encCap"  />
                 <div style="text-align:center; padding-top:5px;">Modifiers</div>
                 <div style="width:95%; text-align:right;">
@@ -272,19 +272,19 @@
                     <div>SPD:<input type=text name="attr_EncSpdMod" title="Speed Modifier" style="width:4em;" /></div>
                 </div>
                 </div>
-       		</div>
+            </div>
             <div class="sheet-weapons">
-            	<h3>Weapons</h3>
+                <h3>Weapons</h3>
                     <div class="sheet-weapon-grid">
-                	<div>Weapon</div><div style="text-align:center;">BCS</div><div style="text-align:center;">Damage</div><div>Range</div><div>OHD?</div>
-                	</div>	
-					<fieldset class="repeating_weapons">
+                    <div>Weapon</div><div style="text-align:center;">BCS</div><div style="text-align:center;">Damage</div><div>Range</div><div>OHD?</div>
+                    </div>  
+                    <fieldset class="repeating_weapons">
                     <div class="sheet-weapon-grid">
                         <span><input type=text class="sheet-wpnTxt" name="attr_name" placeholder="Weapon Name" style="width:10em;"></span>
                         <span><button type=action class="sheet-wpnBtn" name="act_wpnRoll"><span name="attr_wpnSkill"></span><input hidden  name="attr_wpnSkill" placeholder="skill"></span>
                         <span name="attr_bdg_max"></span>
                         <span>
-                    	<select class="sheet-bioText" title="Select Range to target" name=attr_rangeT style="width:8em;margin:0px;">
+                        <select class="sheet-bioText" title="Select Range to target" name=attr_rangeT style="width:8em;margin:0px;">
                             <option value="Point Blank">Point Blank (+2)</option>
                             <option value="Short">Short (+1)</option>
                             <option value="Effective" selected>Effective</option>
@@ -294,9 +294,9 @@
                         </select>                        </span>
                         <span><input type=checkbox name={attr_ohdReq} value=true  title="Check if averaging with OHD required"/></span>
                     </div>
-                    	<div style="font-size:11px;justify-content: space-evenly;;">
+                        <div style="font-size:11px;justify-content: space-evenly;;">
                         <div>BBL/Choke:
-						<select name=attr_bbl style="width:12em;margin:0px;">
+                        <select name=attr_bbl style="width:12em;margin:0px;">
                             <option value=1 >Pistol: Snub (&lt;3&quot;)</option>
                             <option value=2 >Pistol: Short(3-4&quot;)</option>
                             <option value=3 >Pistol: Standard (4-7&quot;)</option>
@@ -327,11 +327,11 @@
                         Cost<input type=text class="sheet-wpnTxt" name="attr_cost" placeholder="$">
                         Skill<input type=text class="sheet-wpnTxt" name="attr_wpnSkill" placeholder="BCS lookup"></div>
                         </div>
-					</fieldset>
-	            </div>
+                    </fieldset>
+                </div>
             <div class="sheet-skills">
-            	<h3>Skills</h3>
-                Skill	Score BCS xpchk avgwOHD	Die
+                <h3>Skills</h3>
+                Skill   Score BCS xpchk avgwOHD Die
                 <div class="sheet-skills-container">
                     <div class="sheet-skillBlock">
                     <fieldset class="repeating_skills">
@@ -356,25 +356,25 @@
             </div>
         </div>
     </div>   
-	<!--####################- End of Main Sheet -#########################-->
+    <!--####################- End of Main Sheet -#########################-->
     
-	<!--###################- Start of Gen Sheet  -########################-->
+    <!--###################- Start of Gen Sheet  -########################-->
     <input name="attr_toggleCharGenSheet" class="sheet-toggleCharGenSheet" style="display: none;" type="checkbox">
-	<div class="sheet-CharGenSheet"> 
+    <div class="sheet-CharGenSheet"> 
         <div class="sheet-characterGen">
             <h1> Character Generation</h1>
         </div>
     </div>
-	<!--####################-  End of Gen Sheet  -########################-->
+    <!--####################-  End of Gen Sheet  -########################-->
     
-	<!--###################- Start of NPC Sheet  -########################-->
-	<input name="attr_toggleNPCSheet" class="sheet-toggleNPCSheet" style="display: none;" type="checkbox">
-	<div class="sheet-NPC"> 
+    <!--###################- Start of NPC Sheet  -########################-->
+    <input name="attr_toggleNPCSheet" class="sheet-toggleNPCSheet" style="display: none;" type="checkbox">
+    <div class="sheet-NPC"> 
             <h1> Non-Player Character</h1>
-	</div>
+    </div>
     
     <div class="sheet-credit">Sheet coded by Martin Etherigton. Roll20 Id 5381507</div>
-	<!--####################-  End of NPC Sheet  -########################-->
+    <!--####################-  End of NPC Sheet  -########################-->
 
 <rolltemplate class="sheet-rolltemplate-savingThrow">
     <div class="sheet-container">
@@ -382,37 +382,37 @@
         <div class=sheet-content>
             <div class="sheet-subHdr">{{reason}}</div>
             <div style="padding-bottom:5px;">{{throw}} Saving Throw</div>
-				{{#rollLess() roll1 2}}
-					<div>{{roll1}} vs {{target}}</div>
-					<div class="sheet-crit"><span style="background-color:#3F6;">&nbsp;Critical Success!&nbsp;</span></div>
+                {{#rollLess() roll1 2}}
+                    <div>{{roll1}} vs {{target}}</div>
+                    <div class="sheet-crit"><span style="background-color:#3F6;">&nbsp;Critical Success!&nbsp;</span></div>
                     <div>Effect Number: {{effect2}}</div>
-				{{/rollLess() roll1 2}}
+                {{/rollLess() roll1 2}}
                 {{#^rollLess() roll1 2}}
                     {{#rollGreater() roll1 19}}
                         <div>{{roll1}} vs {{target}}</div>
-                    	{{#rollGreater() target 19}}
-    	                    <div class="sheet-fumble">Failure possibly <span style="background-color:#F66;">&nbsp;Critically!&nbsp;</span></div>
-	                        <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
-                    	{{/rollGreater() target 19}}
-                    	{{#^rollGreater() target 19}}
+                        {{#rollGreater() target 19}}
+                            <div class="sheet-fumble">Failure possibly <span style="background-color:#F66;">&nbsp;Critically!&nbsp;</span></div>
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{/rollGreater() target 19}}
+                        {{#^rollGreater() target 19}}
                         <div class="sheet-fumble"><span style="background-color:#F66;">&nbsp;Critical Failure!&nbsp;</span></div>
-	                        <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
-                    	{{/^rollGreater() target 19}}
-                    {{/rollGreater() roll1 19}}					
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{/^rollGreater() target 19}}
+                    {{/rollGreater() roll1 19}}                 
                     {{#^rollGreater() roll1 19}}
-						{{#rollGreater() roll1 target}}
-	                        <div>{{roll1}} vs {{target}}</div>
-                        	<div class="sheet-fail">Unsuccessful</div>
-                        	<div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{#rollGreater() roll1 target}}
+                            <div>{{roll1}} vs {{target}}</div>
+                            <div class="sheet-fail">Unsuccessful</div>
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
                         {{/rollGreater() roll1 target}}
                         {{#^rollGreater() roll1 target}}
-	                        <div>{{roll1}} vs {{target}}</div>
-                        	<div class="sheet-success">Success</div>
-                        	<div>Effect Number: {{effectNo}}</div>
+                            <div>{{roll1}} vs {{target}}</div>
+                            <div class="sheet-success">Success</div>
+                            <div>Effect Number: {{effectNo}}</div>
                         {{/^rollGreater() roll1 target}}
-                	{{/^rollGreater() roll1 19}}					
-				{{/^rollLess() roll1 2}}
-			</div>
+                    {{/^rollGreater() roll1 19}}                    
+                {{/^rollLess() roll1 2}}
+            </div>
         </div>
     </div>
 </rolltemplate>
@@ -424,7 +424,7 @@
             <div class="sheet-subHdr">{{reason}}</div>
             <div>
             {{die}} = {{roll1}}
-			</div>
+            </div>
         </div>
     </div>
 </rolltemplate>
@@ -435,381 +435,383 @@
         <div class=sheet-content>
             <div class="sheet-subHdr">{{reason}}</div>
             <div style="padding-bottom:5px;">{{throw}} Skill Roll</div>
-				{{#rollLess() roll1 2}}
-					<div>{{roll1}} vs {{target}}</div>
-					<div class="sheet-crit"><span style="background-color:#3F6;">&nbsp;Critical Success!&nbsp;</span></div>
+                {{#rollLess() roll1 2}}
+                    <div>{{roll1}} vs {{target}}</div>
+                    <div class="sheet-crit"><span style="background-color:#3F6;">&nbsp;Critical Success!&nbsp;</span></div>
                     <div>Effect Number: {{effect2}}</div>
-				{{/rollLess() roll1 2}}
+                {{/rollLess() roll1 2}}
                 {{#^rollLess() roll1 2}}
                     {{#rollGreater() roll1 19}}
                         <div>{{roll1}} vs {{target}}</div>
-                    	{{#rollGreater() target 19}}
-    	                    <div class="sheet-fumble">Failure possibly <span style="background-color:#F66;">&nbsp;Critically!&nbsp;</span></div>
-	                        <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
-                    	{{/rollGreater() target 19}}
-                    	{{#^rollGreater() target 19}}
+                        {{#rollGreater() target 19}}
+                            <div class="sheet-fumble">Failure possibly <span style="background-color:#F66;">&nbsp;Critically!&nbsp;</span></div>
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{/rollGreater() target 19}}
+                        {{#^rollGreater() target 19}}
                         <div class="sheet-fumble"><span style="background-color:#F66;">&nbsp;Critical Failure!&nbsp;</span></div>
-	                        <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
-                    	{{/^rollGreater() target 19}}
-                    {{/rollGreater() roll1 19}}					
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{/^rollGreater() target 19}}
+                    {{/rollGreater() roll1 19}}                 
                     {{#^rollGreater() roll1 19}}
-						{{#rollGreater() roll1 target}}
-	                        <div>{{roll1}} vs {{target}}</div>
-                        	<div class="sheet-fail">Unsuccessful</div>
-                        	<div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
+                        {{#rollGreater() roll1 target}}
+                            <div>{{roll1}} vs {{target}}</div>
+                            <div class="sheet-fail">Unsuccessful</div>
+                            <div>Effect Number: <span style="color:#990000;">{{effectNo}}</span></div>
                         {{/rollGreater() roll1 target}}
                         {{#^rollGreater() roll1 target}}
-	                        <div>{{roll1}} vs {{target}}</div>
-                        	<div class="sheet-success">Success</div>
-                        	<div>Effect Number: {{effectNo}}</div>
+                            <div>{{roll1}} vs {{target}}</div>
+                            <div class="sheet-success">Success</div>
+                            <div>Effect Number: {{effectNo}}</div>
                         {{/^rollGreater() roll1 target}}
-                	{{/^rollGreater() roll1 19}}					
-				{{/^rollLess() roll1 2}}
-			</div>
+                    {{/^rollGreater() roll1 19}}                    
+                {{/^rollLess() roll1 2}}
+            </div>
         </div>
     </div>
 </rolltemplate>
 
-
 <script type="text/worker">
 
-	<!--####################-  configiguration box  -########################-->
-	on("change:toggleNPCSheet", function() {
-		getAttrs(["toggleNPCSheet"], function(values) {
-			if (values.toggleNPCSheet=="on"){
-				setAttrs({toggleCharGenSheet:0,toggleFullSheet:0},{silent: true});	
-			}
-		});
-	});
-				   
-	on("change:toggleFullSheet", function() {
-	   getAttrs(["toggleFullSheet"], function(values) {
-			if (values.toggleFullSheet=="on"){
-				setAttrs({toggleCharGenSheet:0,toggleNPCSheet:0},{silent: true});
-			};
-	   });
-	});
-		
-	on("change:toggleCharGenSheet", function() {
-		getAttrs(["toggleCharGenSheet"], function(values) {
-			if (values.toggleCharGenSheet=="on"){
-				setAttrs({toggleFullSheet:0,toggleNPCSheet:0},{silent: true});	
-			};
-	   });
-	});
-	<!--####################-  configiguration box  -########################-->
-	
-	<!--####################- RepeatingSum PARAMETERS -########################-->
-	const repeatingSum = (destinations, section, fields) => {
-		if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
-		if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
-		getSectionIDs(`repeating_${section}`, idArray => {
-			const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
-			getAttrs([...attrArray], v => {
-				const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
-				const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
-				const output = {};
-				destinations.forEach((destination, index) => {
-					output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
-				});
-				setAttrs(output);
-			}); 
-		}); 
-	};
-	<!--####################- RepeatingSum PARAMETERS -########################-->
+    <!--####################-  configiguration box  -########################-->
+    on("change:toggleNPCSheet", function() {
+        getAttrs(["toggleNPCSheet"], function(values) {
+            if (values.toggleNPCSheet=="on"){
+                setAttrs({toggleCharGenSheet:0,toggleFullSheet:0},{silent: true});  
+            }
+        });
+    });
+                   
+    on("change:toggleFullSheet", function() {
+       getAttrs(["toggleFullSheet"], function(values) {
+            if (values.toggleFullSheet=="on"){
+                setAttrs({toggleCharGenSheet:0,toggleNPCSheet:0},{silent: true});
+            };
+       });
+    });
+        
+    on("change:toggleCharGenSheet", function() {
+        getAttrs(["toggleCharGenSheet"], function(values) {
+            if (values.toggleCharGenSheet=="on"){
+                setAttrs({toggleFullSheet:0,toggleNPCSheet:0},{silent: true});  
+            };
+       });
+    });
+    <!--####################-  configiguration box  -########################-->
+    
+    <!--####################- RepeatingSum PARAMETERS -########################-->
+    const repeatingSum = (destinations, section, fields) => {
+        if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
+        if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
+        getSectionIDs(`repeating_${section}`, idArray => {
+            const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
+            getAttrs([...attrArray], v => {
+                const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
+                const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
+                const output = {};
+                destinations.forEach((destination, index) => {
+                    output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
+                });
+                setAttrs(output);
+            }); 
+        }); 
+    };
+    <!--####################- RepeatingSum PARAMETERS -########################-->
 
-	<!--####################- Attribute functions -########################-->
+    <!--####################- Attribute functions -########################-->
 
-	function MakeEDTemplate(die, attr, rtypem, glMod) {
-		let macro = ""
-		let attrb="";
-		if (glMod=="+0") {
-			glMod = "";
-		} else {
-			glMod += "[mod]";
-		};
-		switch (attr){
-			case 'wit':
-				attrb = "Wit";
-				break;
-			case 'wil':
-				attrb = "Will";
-				break;
-			case 'str':
-				attrb = "Strength";
-				break;
-			case 'dft':
-				attrb = "Deftness";
-				break;
-			case 'spd':
-				attrb = "Speed";
-				break;
-			case 'hlh':
-				attrb = "Health";
-				break;
-		};
-		if (rtypem>0) {macro = "/w gm ";};
-		macro += "&{template:effectDie} {{name=@{character_name}}} {{reason=" + attrb + " Effect Die Roll}} ";
-		macro += "{{die=" + die + glMod + "}} {{roll1=[[" + die + glMod + "]]}}";
-		return macro;
-	};	
-	
-	function MakeSTTemplate(attr, target, throwType, rtypem, glMod, enMod) {
-		let macro = "";
-		let attrb="";
-		let en = Math.abs(enMod);
-		let tt="";
-		switch (throwType) {
-			case 'Attribute':
-				tt = "[AST]";
-				break;
-			case 'Critical':
-				tt = "[CST]";
-				break;
-		};
-		switch (attr){
-			case 'wit':
-				attrb = "Wit";
-				break;
-			case 'wil':
-				attrb = "Will";
-				break;
-			case 'str':
-				attrb = "Strength";
-				break;
-			case 'dft':
-				attrb = "Deftness";
-				break;
-			case 'spd':
-				attrb = "Speed";
-				break;
-			case 'hlh':
-				attrb = "Health";
-				break;
-			case 'cha':
-				attrb = "Charismatic";
-				break;
-			case 'cbt':
-				attrb = "Combative";
-				break;
-			case 'com':
-				attrb = "Communicative";
-				break;
-			case 'est':
-				attrb = "Esthetic";
-				break;
-			case 'mec':
-				attrb = "Mechanical";
-				break;
-			case 'nat':
-				attrb = "Natural";
-				break;
-			case 'sci':
-				attrb = "Scientific";
-				break;
-		};
-		if (rtypem>0) {macro = "/w gm ";};
-		macro += "&{template:savingThrow} [[ [[ [[" + target + tt + "-" + en + "[enc]" + glMod + "[mod] ]] - [[1d20]] ]] *2]]  {{name=@{character_name}}} {{reason=" + attrb + "}} {{throw=" + throwType + "}} {{target=$[[0]]}} {{roll1=$[[1]]}} {{effectNo=$[[2]]}} {{effect2=$[[3]]}}";
-		return macro;
-	};
-	
-	function MakeSRTemplate(attr, target, throwType, rtypem, glMod, enMod) {
-		let macro = "";
-		let attrb="";
-		let en = Math.abs(enMod);
-		switch (attr){
-			case 'cha':
-				attrb = "Charismatic";
-				break;
-			case 'cbt':
-				attrb = "Combative";
-				break;
-			case 'com':
-				attrb = "Communicative";
-				break;
-			case 'est':
-				attrb = "Esthetic";
-				break;
-			case 'mec':
-				attrb = "Mechanical";
-				break;
-			case 'nat':
-				attrb = "Natural";
-				break;
-			case 'sci':
-				attrb = "Scientific";
-				break;
-		};
-		if (rtypem>0) {macro = "/w gm ";};
-		macro += "&{template:skillRoll} [[ [[ [[" + target + "[BCS]-" + en + "[enc]" + glMod + "[mod] ]] - [[1d20]] ]] *2]]  {{name=@{character_name}}} {{reason=" + attrb + "}} {{throw=" + throwType + "}} {{target=$[[0]]}} {{roll1=$[[1]]}} {{effectNo=$[[2]]}} {{effect2=$[[3]]}}";
-		return macro;
-	};
-	
-	function attrGroup(val) {
-		let grp=0;
-		if ((val>0) && (val<5)) {
-			grp=1;
-		} else if (val>4) {
-			val += 5;
-			grp = 1 + Math.floor(val/10);
-		};
-		return grp
-	};	
+    function MakeEDTemplate(die, attr, rtypem, glMod) {
+        let macro = ""
+        let attrb="";
+        if (glMod=="+0") {
+            glMod = "";
+        } else {
+            glMod += "[mod]";
+        };
+        switch (attr){
+            case 'wit':
+                attrb = "Wit";
+                break;
+            case 'wil':
+                attrb = "Will";
+                break;
+            case 'str':
+                attrb = "Strength";
+                break;
+            case 'dft':
+                attrb = "Deftness";
+                break;
+            case 'spd':
+                attrb = "Speed";
+                break;
+            case 'hlh':
+                attrb = "Health";
+                break;
+        };
+        if (rtypem>0) {macro = "/w gm ";};
+        macro += "&{template:effectDie} {{name=@{character_name}}} {{reason=" + attrb + " Effect Die Roll}} ";
+        macro += "{{die=" + die + glMod + "}} {{roll1=[[" + die + glMod + "]]}}";
+        return macro;
+    };  
+    
+    function MakeSTTemplate(attr, target, throwType, rtypem, glMod, enMod) {
+        let macro = "";
+        let attrb="";
+        let en = Math.abs(enMod);
+        let tt="";
+        switch (throwType) {
+            case 'Attribute':
+                tt = "[AST]";
+                break;
+            case 'Critical':
+                tt = "[CST]";
+                break;
+        };
+        switch (attr){
+            case 'wit':
+                attrb = "Wit";
+                break;
+            case 'wil':
+                attrb = "Will";
+                break;
+            case 'str':
+                attrb = "Strength";
+                break;
+            case 'dft':
+                attrb = "Deftness";
+                break;
+            case 'spd':
+                attrb = "Speed";
+                break;
+            case 'hlh':
+                attrb = "Health";
+                break;
+            case 'cha':
+                attrb = "Charismatic";
+                break;
+            case 'cbt':
+                attrb = "Combative";
+                break;
+            case 'com':
+                attrb = "Communicative";
+                break;
+            case 'est':
+                attrb = "Esthetic";
+                break;
+            case 'mec':
+                attrb = "Mechanical";
+                break;
+            case 'nat':
+                attrb = "Natural";
+                break;
+            case 'sci':
+                attrb = "Scientific";
+                break;
+        };
+        if (rtypem>0) {macro = "/w gm ";};
+        macro += "&{template:savingThrow} [[ [[ [[" + target + tt + "-" + en + "[enc]" + glMod + "[mod] ]] - [[1d20]] ]] *2]]  {{name=@{character_name}}} {{reason=" + attrb + "}} {{throw=" + throwType + "}} {{target=$[[0]]}} {{roll1=$[[1]]}} {{effectNo=$[[2]]}} {{effect2=$[[3]]}}";
+        return macro;
+    };
+    
+    function MakeSRTemplate(attr, target, throwType, rtypem, glMod, enMod) {
+        let macro = "";
+        let attrb="";
+        let en = Math.abs(enMod);
+        switch (attr){
+            case 'cha':
+                attrb = "Charismatic";
+                break;
+            case 'cbt':
+                attrb = "Combative";
+                break;
+            case 'com':
+                attrb = "Communicative";
+                break;
+            case 'est':
+                attrb = "Esthetic";
+                break;
+            case 'mec':
+                attrb = "Mechanical";
+                break;
+            case 'nat':
+                attrb = "Natural";
+                break;
+            case 'sci':
+                attrb = "Scientific";
+                break;
+        };
+        if (rtypem>0) {macro = "/w gm ";};
+        macro += "&{template:skillRoll} [[ [[ [[" + target + "[BCS]-" + en + "[enc]" + glMod + "[mod] ]] - [[1d20]] ]] *2]]  {{name=@{character_name}}} {{reason=" + attrb + "}} {{throw=" + throwType + "}} {{target=$[[0]]}} {{roll1=$[[1]]}} {{effectNo=$[[2]]}} {{effect2=$[[3]]}}";
+        return macro;
+    };
+    
+    function attrGroup(val) {
+        let grp=0;
+        if ((val>0) && (val<5)) {
+            grp=1;
+        } else if (val>4) {
+            val += 5;
+            grp = 1 + Math.floor(val/10);
+        };
+        return grp
+    };  
 
-	function attrED(val) {
-		let grp="0";
-		if ((val>0) && (val<5)) {grp="1D3";};
-		if ((val>4) && (val<15)) {grp="1D6";};
-		if ((val>14) && (val<25)) {grp="1D10";};
-		if ((val>24) && (val<35)) {grp="2D6";};
-		if ((val>34) && (val<45)) {grp="2D10";};
-		if (val>44){
-			val -= 34;
-			grp = "2d10+" + Math.floor(val/10);
-		};
-		return grp;
-	};
-	
-	['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
-		on(`clicked:${attr}EffectDie`, (info) => {
-			getAttrs([`${attr}Grp_max`, 'rollType_max', 'globalMod'], function(v) {
-				startRoll(MakeEDTemplate(v[`${attr}Grp_max`], `${attr}`, (parseInt(v.rollType_max)||0), (v.globalMod||"+0")), (results) => {
-				const total = results.results.roll1.result
-				const computed = total % 4;
-				finishRoll(
-					results.rollId,
-					{
-						roll1: computed
-					});
-				});
-			});
-		});
-	});
-	
-	['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
-		on(`clicked:${attr}AST`, (info) => {
-			getAttrs(['rollType_max', `${attr}ST`, 'globalMod', 'EncMod'], function(v) {
-				startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST`])||0), 'Attribute', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
-				const total = results.results.roll1.result
-				const computed = total % 4;
-				finishRoll(
-					results.rollId,
-					{
-						roll1: computed
-					});
-				});
-			});
-		});
-	});
-	
-	['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
-		on(`clicked:${attr}CST`, (info) => {
-			getAttrs(['rollType_max', `${attr}ST_max`, 'globalMod', 'EncMod'], function(v) {
-				startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST_max`])||0), 'Critical', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
-				const total = results.results.roll1.result
-				const computed = total % 4;
-				finishRoll(
-					results.rollId,
-					{
-						roll1: computed
-					});
-				});
-			});
-		});
-	});
-	
-	on('change:dftGrp change:spdGrp change:wit change:wil change:strST change:hlhGrp change:dft', (info) => { 
-		getAttrs(['dftGrp', 'spdGrp', 'witGrp', 'wit', 'wil', 'strST', 'hlhGrp', 'dft', 'ohd_max', 'ohd'], function(v) {
-			let x = ((parseInt(v.dftGrp)||0) + (parseInt(v.spdGrp)||0))/2;
-			let e = 5 + (parseInt(v.strST)||0);
-			let s = 10 + (parseInt(v.hlhGrp)||0);
-			let f = (parseInt(v.wit)||0) + (parseInt(v.wil)||0);
-			if (isNaN(parseInt(v.ohd))) {
-				let d = Math.floor(((parseInt(v.dft)||0) + f)/6);
-console.log({d});				
-				setAttrs({ohd_max:d});
-			};
-			
-			
-			setAttrs({
-				cda: x,
-				fis_max: f,
-				encCap: e,
-				shock: s
-			});
-		
-		});
-	});		
-	
-	['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
-		on(`change:${attr}`, (info) => { 
-			getAttrs([`${attr}`], function(v) {
-				const st = Math.floor((parseInt(v[attr])||0)/2);
-				const stmax = Math.round((parseInt(v[attr])||0)/3);
-				const grp = attrGroup((parseInt(v[attr])||0));
-				const grpmax =  attrED((parseInt(v[attr])||0));
-				setAttrs({
-					[`${attr}ST`]: st,
-					[`${attr}ST_max`]: stmax,
-					[`${attr}Grp`]: grp,
-					[`${attr}Grp_max`]:grpmax
-				});
-			});
-		});	
-	});
-	
-	['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
-		on(`change:${attr}`, (info) => { 
-			getAttrs([`${attr}`, `${attr}_max`], function(v) {
-				const base = parseInt(v[attr])||0;
-				const tmax = parseInt(v[`${attr}_max`])||0;
-				let st = base + tmax;
-				if (st>20) {st = 20;};
-				const bcs = Math.floor((base + tmax)/5);
-				setAttrs({
-					[`${attr}ST`]: st,
-					[`${attr}BCS`]: bcs
-				});
-			});
-		});	
-	});
-	
-	['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
-		on(`clicked:${attr}ST`, (info) => {
-			getAttrs(['rollType_max', `${attr}ST`, 'globalMod', 'EncMod'], function(v) {
-				startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST`])||0), 'Talent', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
-				const total = results.results.roll1.result
-				const computed = total % 4;
-				finishRoll(
-					results.rollId,
-					{
-						roll1: computed
-					});
-				});
-			});
-		});
-	});
-	
-	['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
-		on(`clicked:${attr}BCS`, (info) => {
-			getAttrs(['rollType_max', `${attr}BCS`, 'globalMod', 'EncMod'], function(v) {
-				startRoll(MakeSRTemplate(`${attr}`, (parseInt(v[`${attr}BCS`])||0), 'Talent as Raw', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
-				const total = results.results.roll1.result
-				const computed = total % 4;
-				finishRoll(
-					results.rollId,
-					{
-						roll1: computed
-					});
-				});
-			});
-		});
-	});
-	
+    function attrED(val) {
+        let grp="0";
+        if ((val>0) && (val<5)) {grp="1D3";};
+        if ((val>4) && (val<15)) {grp="1D6";};
+        if ((val>14) && (val<25)) {grp="1D10";};
+        if ((val>24) && (val<35)) {grp="2D6";};
+        if ((val>34) && (val<45)) {grp="2D10";};
+        if (val>44){
+            val -= 34;
+            grp = "2d10+" + Math.floor(val/10);
+        };
+        return grp;
+    };
+    
+    ['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
+        on(`clicked:${attr}EffectDie`, (info) => {
+            getAttrs([`${attr}Grp_max`, 'rollType_max', 'globalMod'], function(v) {
+                startRoll(MakeEDTemplate(v[`${attr}Grp_max`], `${attr}`, (parseInt(v.rollType_max)||0), (v.globalMod||"+0")), (results) => {
+                const total = results.results.roll1.result
+                const computed = total % 4;
+                finishRoll(
+                    results.rollId,
+                    {
+                        roll1: computed
+                    });
+                });
+            });
+        });
+    });
+    
+    ['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
+        on(`clicked:${attr}AST`, (info) => {
+            getAttrs(['rollType_max', `${attr}ST`, 'globalMod', 'EncMod'], function(v) {
+                startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST`])||0), 'Attribute', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
+                const total = results.results.roll1.result
+                const computed = total % 4;
+                finishRoll(
+                    results.rollId,
+                    {
+                        roll1: computed
+                    });
+                });
+            });
+        });
+    });
+    
+    ['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
+        on(`clicked:${attr}CST`, (info) => {
+            getAttrs(['rollType_max', `${attr}ST_max`, 'globalMod', 'EncMod'], function(v) {
+                startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST_max`])||0), 'Critical', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
+                const total = results.results.roll1.result
+                const computed = total % 4;
+                finishRoll(
+                    results.rollId,
+                    {
+                        roll1: computed
+                    });
+                });
+            });
+        });
+    });
+    
+    on('change:dftGrp change:spdGrp change:wit change:wil change:strST change:hlhGrp change:dft', (info) => { 
+        getAttrs(['dftGrp', 'spdGrp', 'witGrp', 'wit', 'wil', 'strST', 'hlhGrp', 'dft', 'ohd_max', 'ohd'], function(v) {
+            let x = ((parseInt(v.dftGrp)||0) + (parseInt(v.spdGrp)||0))/2;
+            let e = 5 + (parseInt(v.strST)||0);
+            let s = 10 + (parseInt(v.hlhGrp)||0);
+            let f = (parseInt(v.wit)||0) + (parseInt(v.wil)||0);
+            if (isNaN(parseInt(v.ohd))) {
+                let d = Math.floor(((parseInt(v.dft)||0) + f)/6);
+console.log({d});               
+                setAttrs({ohd_max:d});
+            };
+            
+            
+            setAttrs({
+                cda: x,
+                fis_max: f,
+                encCap: e,
+                shock: s
+            });
+        
+        });
+    });     
+    
+    ['wit', 'wil', 'str', 'dft', 'spd', 'hlh'].forEach(attr => {
+        on(`change:${attr}`, (info) => { 
+            getAttrs([`${attr}`], function(v) {
+                const st = Math.floor((parseInt(v[attr])||0)/2);
+                const stmax = Math.round((parseInt(v[attr])||0)/3);
+                const grp = attrGroup((parseInt(v[attr])||0));
+                const grpmax =  attrED((parseInt(v[attr])||0));
+                setAttrs({
+                    [`${attr}ST`]: st,
+                    [`${attr}ST_max`]: stmax,
+                    [`${attr}Grp`]: grp,
+                    [`${attr}Grp_max`]:grpmax
+                });
+            });
+        }); 
+    });
+    
+    ['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
+        on(`change:${attr}`, (info) => { 
+            getAttrs([`${attr}`, `${attr}_max`], function(v) {
+                const base = parseInt(v[attr])||0;
+                const tmax = parseInt(v[`${attr}_max`])||0;
+                let st = base + tmax;
+                if (st>20) {st = 20;};
+                const bcs = Math.floor((base + tmax)/5);
+                setAttrs({
+                    [`${attr}ST`]: st,
+                    [`${attr}BCS`]: bcs
+                });
+            });
+        }); 
+    });
+    
+    ['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
+        on(`clicked:${attr}ST`, (info) => {
+            getAttrs(['rollType_max', `${attr}ST`, 'globalMod', 'EncMod'], function(v) {
+                startRoll(MakeSTTemplate(`${attr}`, (parseInt(v[`${attr}ST`])||0), 'Talent', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
+                const total = results.results.roll1.result
+                const computed = total % 4;
+                finishRoll(
+                    results.rollId,
+                    {
+                        roll1: computed
+                    });
+                });
+            });
+        });
+    });
+    
+    ['cha', 'cbt', 'com', 'est', 'mec', 'nat', 'sci'].forEach(attr => {
+        on(`clicked:${attr}BCS`, (info) => {
+            getAttrs(['rollType_max', `${attr}BCS`, 'globalMod', 'EncMod'], function(v) {
+                startRoll(MakeSRTemplate(`${attr}`, (parseInt(v[`${attr}BCS`])||0), 'Talent as Raw', (parseInt(v.rollType_max)||0), (v.globalMod||"+0"),( parseInt(v.EncMod)||0)), (results) => {
+                const total = results.results.roll1.result
+                const computed = total % 4;
+                finishRoll(
+                    results.rollId,
+                    {
+                        roll1: computed
+                    });
+                });
+            });
+        });
+    });
+    
 
-	
-	
-	
+    
+    
+    
 </script>
 
 <!-- ######################### Roll Templates ######################### -->
+
+
+

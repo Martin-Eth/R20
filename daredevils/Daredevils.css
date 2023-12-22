@@ -264,10 +264,14 @@ transform: translateX(14px);
 	align-items:center;
 	width:29em;
 }
+.sheet-chdr,
 .sheet-hdr{
 	text-align: center;
 	font-weight: bold;
-	font-variant: small-caps;	
+	font-variant: small-caps;
+}
+.sheet-hdr {
+			font-size: 10px;
 }
 .sheet-attribText {
 	width:3.3em;

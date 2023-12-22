@@ -25,7 +25,7 @@
                 	</span>
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
-                        <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">Full Player Character Sheet
+                        <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                         <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
@@ -264,7 +264,7 @@
                 	</span>
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
-                        <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">Full Player Character Sheet
+                        <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                         <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
@@ -1168,7 +1168,7 @@
                 	</span>
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
-                        <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">Full Player Character Sheet
+                        <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                         <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
@@ -1804,7 +1804,7 @@
                 	</span>
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
-                        <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">Full Player Character Sheet
+                        <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                         <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
@@ -2042,7 +2042,7 @@
                 	</span>
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
-                        <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">Full Player Character Sheet
+                        <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                         <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
@@ -3280,7 +3280,7 @@
 			<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:center;"> <!-- sheet-config -->
 				<input name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type=hidden checked="checked"><!--Character Generation -->
                 <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox"> Full Player Character Sheet 
-                <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox"> NPC Sheet
+                <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
                 <b>&emsp;Version 202312.15</b>
                 <div>Set min Max Health:<input type=number name="attr_hlhOption" min="0" max="1" value="0" style="height:18px; width:3em;text-align:right;"/></div>
 			</div> <!-- sheet-config -->
@@ -6151,7 +6151,6 @@
 			speedStatus -= rib;
 			//speedStatus -= infection;
 			if (unconscious==1) {speedStatus = 0;};	
-			if (speedStatus<0) {speedStatus = 0;};		
 	// - Set Defence Status value --		
 			if (hungry==0) {
 				defenceStatus += 1;
@@ -6354,6 +6353,7 @@
 			if(v.conUncon <1){
 				myspd = (parseFloat(v.spdItems||0)) + (parseFloat(v.spdInnate||0)) + (parseFloat(v.spdStatus)||0);
 			};
+            if (myspd<0) {mysp = 0;};
 			setAttrs({
 				spdTotal: Math.round(myspd)
 			});

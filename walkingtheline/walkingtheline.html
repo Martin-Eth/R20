@@ -26,7 +26,8 @@
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
                         <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
-                        <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
+                        <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
+						<button type="action" name="act_npcSheetBtn" class="mySheetBtn">View NPC Sheet</button>
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
                         <input name="attr_tnb1" class="sheet-tnb1" type="checkbox" value="on" checked="checked">&nbsp;show Name, Days Survived Down Counter&hellip;</input><br />
@@ -265,7 +266,8 @@
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
                         <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
-                        <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
+                        <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
+						<button type="action" name="act_npcSheetBtn" class="mySheetBtn">View NPC Sheet</button>
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
                         <input name="attr_tnb2" class="sheet-tnb2" type="checkbox" checked="checked">&nbsp;show Name, Days Survived Down Counter&hellip;</input><br />
@@ -1169,7 +1171,8 @@
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
                         <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
-                        <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
+                        <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
+						<button type="action" name="act_npcSheetBtn" class="mySheetBtn">View NPC Sheet</button>
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
                         <input name="attr_tnb3" class="sheet-tnb3" type="checkbox" checked="checked">&nbsp;show Name, Days Survived Down Counter&hellip;</input><br />
@@ -1805,7 +1808,8 @@
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
                         <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
-                        <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
+                        <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
+						<button type="action" name="act_npcSheetBtn" class="mySheetBtn">View NPC Sheet</button>
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
                         <input name="attr_tnb4" class="sheet-tnb4" type="checkbox" checked="checked">&nbsp;show Name, Days Survived Down Counter&hellip;</input><br />
@@ -2043,7 +2047,8 @@
                 	<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:left"> <!-- sheet-config -->
                         <div style="text-align:center;"><input hidden  name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox" checked="checked">
                         <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
-                        <input name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">NPC Sheet
+                        <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
+						<button type="action" name="act_npcSheetBtn" class="mySheetBtn">View NPC Sheet</button>
                         </div>
                         <div class="hdrOptions" style="padding-left:22em;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
                         <input name="attr_tnb5" class="sheet-tnb5" type="checkbox" checked="checked">&nbsp;show Name, Days Survived Down Counter&hellip;</input><br />
@@ -3278,11 +3283,13 @@
             	<span style='font-family:pictos;' >y</span>
             </span>
 			<div class="sheet-config" style="border-style: ridge; border-color: gray; padding: 5px; color:#000; background-color: #87985e;text-align:center;"> <!-- sheet-config -->
-				<input name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type=hidden checked="checked"><!--Character Generation -->
-                <input name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox"> Full Player Character Sheet 
+				<input hidden name="attr_toggleQSSheet" class="sheet-toggleQSSheet" type="checkbox">
+                <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox">
                 <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
-                <b>&emsp;Version 202312.15</b>
-                <div>Set min Max Health:<input type=number name="attr_hlhOption" min="0" max="1" value="0" style="height:18px; width:3em;text-align:right;"/></div>
+				<button type="action" name="act_fullSheetBtn" class="mySheetBtn">View Full Sheet</button>
+				<div class="hdrOptions" style="text -align: center;border-top:1px dotted #1f1f1f;margin-top:5px;padding-top:5px">
+                	<div>Set min Max Health:<input type=number name="attr_hlhOption" min="0" max="1" value="0" style="height:18px; width:3em;text-align:right;"/></div>
+				</div>
 			</div> <!-- sheet-config -->
 		</div> <!-- sheet-cdiv -->
         <br />
@@ -3400,7 +3407,15 @@
 			}
 		});
 	});
-				   
+
+	on("clicked:npcSheetBtn", function()  {
+		setAttrs({toggleQSSheet:0,toggleFullSheet:0,toggleNPC1Sheet:"on"});	
+	});
+
+	on("clicked:fullSheetBtn", function()  {
+		setAttrs({toggleQSSheet:0,toggleFullSheet:"on",toggleNPC1Sheet:0});	
+	});
+
 	on("change:toggleFullSheet", function() {
 	   getAttrs(["toggleFullSheet"], function(values) {
 			if (values.toggleFullSheet=="on"){

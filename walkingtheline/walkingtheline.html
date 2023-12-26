@@ -3288,7 +3288,6 @@
                 <input hidden name="attr_toggleFullSheet" class="sheet-toggleFullSheet" type="checkbox"> 
                 <input hidden name="attr_toggleNPC1Sheet" class="sheet-toggleNPC1Sheet" type="checkbox">
 				<button type="action" name="act_fullSheetBtn" class="mySheetBtn">View Full Sheet</button>
-                <b>&emsp;Version 202312.15</b>
                 <div>Set min Max Health:<input type=number name="attr_hlhOption" min="0" max="1" value="0" style="height:18px; width:3em;text-align:right;"/></div>
 			</div> <!-- sheet-config -->
 		</div> <!-- sheet-cdiv -->
@@ -6368,7 +6367,7 @@
 			if(v.conUncon <1){
 				myspd = (parseFloat(v.spdItems||0)) + (parseFloat(v.spdInnate||0)) + (parseFloat(v.spdStatus)||0);
 			};
-            if (myspd<0) {mysp = 0;};
+            if (myspd<0) {myspd = 0;};
 			setAttrs({
 				spdTotal: Math.round(myspd)
 			});

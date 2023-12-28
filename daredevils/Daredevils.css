@@ -1,6 +1,5 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rampart+One&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rampart+One&family=Special+Elite&display=swap');
+
 
 .charsheet{
 	background-color:#e8e8e8;	
@@ -334,11 +333,11 @@ transform: translateX(14px);
 .sheet-rolltemplate-skillRoll .sheet-hdr,
 .sheet-rolltemplate-effectDie .sheet-hdr,
 .sheet-rolltemplate-savingThrow .sheet-hdr {
-	font-size: 16px;
-	padding: 0.5em;
-	font-weight: bold;
-	background-color: #446fa7;
-	color: #2a1c01;
+    font-size: 16px;
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: #446fa7;
+    color: #2a1c01;
 }
 .sheet-rolltemplate-skillRoll .sheet-subHdr,
 .sheet-rolltemplate-effectDie .sheet-subHdr,

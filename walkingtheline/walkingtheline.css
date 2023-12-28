@@ -761,6 +761,7 @@ h3 {
 	border-color: #000;
 	font-family:Contrail One, Helvetica, sans-serif;
 	width:7em;
+	padding-top:5px;
 }
 .charsheet button[type=action].mySheetBtn:hover {
 	background-color: #999; 
